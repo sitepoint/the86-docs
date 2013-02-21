@@ -1,0 +1,13 @@
+
+-# Required locals: title, action, parameters, response
+-# Optional: subtitle
+%h2=title
+%dl
+  %dt Endpoint
+  %dd=action
+  %dt Parameters
+  %dd
+    =partial("dfs_dl", locals: { node: parameters })
+  %dt Response
+  %dd 
+    =partial("dfs_dl", locals: { node: response })

@@ -18,9 +18,12 @@ module SiteHelpers
   end
 
   def endpoint(locals = {})
-    defaults = {}
+    defaults = {subtitle: nil, example: nil}
     all_locals = defaults.merge(locals)
     partial("endpoint", locals: all_locals)
   end
 
+  def optional_parameter(p)
+    "<em>optional</em> #{p}"
+  end
 end

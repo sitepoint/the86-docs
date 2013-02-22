@@ -1,0 +1,33 @@
+%h1 Groups resource
+
+%p A Group has one or more administrators (Users). A Group is referenced in an endpoint with the group's slug
+%p
+  Subresources: 
+  =link_to("Conversations", conversations_path)
+
+=endpoint(title: "Listing Groups",
+  subtitle: "Lists groups for the authenticated user",
+  action: "GET /groups",
+  parameters: "None",
+  response: %q{[{"id":12,"name":"John's Group","slug":"12-john-s-group","created_at":"2013-02-21T22:54:53Z","updated_at":"2013-02-21T22:54:53Z","member_count":1},{"id":13,"name":"The Citizens","slug":"13-the-citizens","created_at":"2013-02-21T22:57:12Z","updated_at":"2013-02-21T22:57:12Z","member_count":2}]})
+
+=endpoint(title: "Create Group",
+  subtitle: "Creates a new group and adds the authenticated user as an administrator.",
+  action: "POST /groups",
+  parameters: { "name : String" => "Cannot be empty. Must contain at least one word-character [a-zA-Z0-9_]" },
+  example: %q{curl -d 'name=My%20New%20Pod' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups},
+  response: '{"id":14,"name":"My New Pod","slug":"14-my-new-pod","created_at":"2013-02-21T23:24:49Z","updated_at":"2013-02-21T23:24:49Z","member_count":1}')
+
+
+=endpoint(title: "Deleting a Group",
+  subtitle: "Deletes a group. Authenticated user must be an administrator",
+  action: "DELETE /groups/:group_slug",
+  parameters: "None",
+  example: 'curl -X DELETE -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/14-my-new-pod',
+  response: '')
+
+=endpoint(title: "Showing a Group",
+  action: "GET /groups/:group_slug",
+  parameters: "None",
+  example: 'curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens',
+  response: '{"id":13,"name":"The Citizens","slug":"13-the-citizens","created_at":"2013-02-21T22:57:12Z","updated_at":"2013-02-21T22:57:12Z","member_count":2}')

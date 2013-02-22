@@ -1,0 +1,34 @@
+---
+title: "Posts"
+---
+
+- alias :o :optional_parameter
+
+%h1 Posts resource
+
+
+=endpoint(title: "Index Posts",
+  action: "GET /api/v1/groups/:group_id/conversations/:conversation_id/posts",
+  parameters: "None",
+  example: %q{curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts},
+  response: %q{[{"id":36,"content":"Hey, this is great!","content_html":"<p>Hey, this is great!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-21T23:03:57Z","updated_at":"2013-02-21T23:03:57Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"},"likes":[]},{"id":37,"content":"It sure is!","content_html":"<p>It sure is!</p>","is_original":false,"in_reply_to_id":36,"created_at":"2013-02-21T23:05:48Z","updated_at":"2013-02-21T23:05:48Z","attachments":[],"user":{"id":20,"name":"Mary Citizen","email":"mary@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T23:00:06Z","url":"http://learnable.vm:3000/api/v1/users/20"},"in_reply_to":{"id":36,"content":"Hey, this is great!","content_html":"<p>Hey, this is great!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-21T23:03:57Z","updated_at":"2013-02-21T23:03:57Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"}},"likes":[]}]})
+
+
+=endpoint(title: "Create a Post",
+  action: "POST /api/v1/groups/:group_id/conversations/:conversation_id/posts",
+  parameters: "content : String",
+  example: %q{curl -d"content=A%20new%20post!!" -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts},
+  response: %q{{"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-22T04:41:18Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"},"likes":[]}})
+ 
+
+=endpoint(title: "Get a Post",
+  subtitle: "",
+  action: "GET /api/v1/groups/:group_id/conversations/:conversation_id/posts/:post_id",
+  parameters: "None",
+  example: %q{curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/39},
+  response: %q{{"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-22T04:41:18Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"},"likes":[]}})
+
+
+
+
+

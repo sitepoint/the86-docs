@@ -1,10 +1,29 @@
 ---
-title: Index
-description: The86 Doc Home
+title: 
+description: The86 Documentation
 ---
 
-%p=link_to("Users", users_path)
-%p=link_to("Groups", groups_path)
-%p=link_to("Conversations", conversations_path)
-%p=link_to("Posts", posts_path)
 
+%ul
+  %li= link_to "Introduction", introduction_path
+  %li= link_to "Versioning", versioning_path
+  %li= link_to "Authentication", authentication_path
+  %li= link_to "Errors", errors_path
+  %li= link_to "Representations", representations_path
+  %li= link_to "Webhooks", webhooks_path
+  %li
+    Resources
+    %ul
+      %li= link_to "Users", users_path
+      %li= link_to "Groups", groups_path
+      %li= link_to "Conversations", conversations_path
+      %li= link_to "Posts", posts_path
+
+
+-# Sections
+= partial "introduction"
+= partial "versioning"
+= partial "authentication"
+= partial "errors"
+= partial "representations"
+= partial "webhooks"

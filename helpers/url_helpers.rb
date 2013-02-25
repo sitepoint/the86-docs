@@ -1,19 +1,32 @@
 module UrlHelpers
 
-  def users_path
-    "/users.html"
+  PAGES = %w{
+    users
+    groups
+    conversations
+    posts
+  }
+
+  FRONT_PAGE_SECTIONS = %w{
+    introduction
+    versioning
+    authentication
+    message_formats
+    errors
+    representations
+    webhooks
+  }
+
+  PAGES.each do |page|
+    define_method "#{page}_path" do
+      "/#{page}.html"
+    end
   end
 
-  def groups_path
-    "/groups.html"
-  end
-
-  def conversations_path
-    "/conversations.html"
-  end
-
-  def posts_path
-    "/posts.html"
+  FRONT_PAGE_SECTIONS.each do |section|
+    define_method "#{section}_path" do
+      "/##{section}"
+    end
   end
 
 end

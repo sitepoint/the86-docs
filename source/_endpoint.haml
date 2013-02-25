@@ -7,8 +7,13 @@
   %dt Endpoint
   %dd=action
   %dt Parameters
-  %dd
-    =partial("dfs_dl", locals: { node: parameters })
+  - if parameters.kind_of?(Array)
+    -parameters.each do |p|
+      %dd
+        =partial("parameter", locals: { parameter: p })
+  - else
+    %dd
+      =parameters.to_s
   - if example
     %dt Example using CURL
     %dd 

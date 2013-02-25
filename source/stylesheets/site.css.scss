@@ -7,3 +7,46 @@
 *= require "vendor/autumn.css"
 
 */
+
+h1, h2 {
+  font-family: "Rufina", serif; // something different.
+}
+
+h2 {
+  font-size: 24px; // smaller font for subheadings.
+  margin-top: 48px; // space above subheadings.
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 32px 0; // extra space around main heading.
+}
+
+li {
+  line-height: 24px; // more spacing for list items.
+}
+
+body {
+  font-size: 18px; // larger!
+  line-height: 24px; // less dense text.
+}
+
+p {
+  margin: 0 0 16px; // more space between paragraphs.
+}
+
+article {
+
+  margin-bottom: 100px; // space between articles.
+
+  h1 {
+    border-bottom: 1px dotted; // underline beneath main headings.
+    margin-bottom: 32px;
+  }
+
+}
+
+.toc {
+  margin-top: 40px; // space around table of contents.
+  margin-bottom: 40px;
+}

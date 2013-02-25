@@ -1,19 +1,20 @@
 module UrlHelpers
 
   PAGES = %w{
-    users
-    groups
+    clients
     conversations
+    groups
     posts
+    users
   }
 
   FRONT_PAGE_SECTIONS = %w{
-    introduction
-    versioning
     authentication
-    message_formats
     errors
+    introduction
+    message_formats
     representations
+    versioning
     webhooks
   }
 

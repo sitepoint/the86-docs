@@ -11,6 +11,9 @@
       %dd
         - if k == "body"
           =partial("json_pretty_print", locals: { json_string: v } )
+        - elsif k == 'status'
+          =h v.to_s
+          =data.http_status_codes.definitions[v]
         - else
           =partial("dfs_dl", locals: { node: v })
 - else

@@ -1,0 +1,5 @@
+-# Locals: json_string
+- code("json") do
+  - JSON.pretty_generate(JSON.parse(json_string))
+-#:preserve
+  -#{escape_once(JSON.pretty_generate(JSON.parse(json_string)))}

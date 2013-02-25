@@ -1,6 +1,14 @@
 users:
   endpoints:
 
+    - title: "Creating a User"
+      action: "POST /users"
+      parameters:
+        - key: name
+          description: Must be longer than 4 chars
+      response: >
+        {"id":10,"name":"\"Matt\"","email":null,"avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T03:30:03Z","url":"http://learnable.vm:3000/api/v1/users/10","access_tokens":[{"created_at":"2013-02-21T03:30:03Z","id":8,"token":"YOG_81weQhXg4hyhMf8Z2TdZ28dpHU4BCR7Ux9l3Ql4","updated_at":"2013-02-21T03:30:03Z","user_id":10}]}
+
     - title: "Retrieving a user"
       action: "GET /users/:user_id"
       parameters: "None"

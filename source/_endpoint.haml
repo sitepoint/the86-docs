@@ -12,10 +12,13 @@
   - if example
     %dt Example using CURL
     %dd 
-      =h example
-  - if response && !response.empty?
-    %dt Response
-    %dd 
+      %code
+        =h example
+  %dt Response
+  %dd 
+    - if response && !response.empty?
       %pre
         :preserve
           #{escape_once(JSON.pretty_generate(JSON.parse(response)))}
+    - else
+      None

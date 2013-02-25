@@ -31,3 +31,6 @@
   parameters: "None",
   example: 'curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens',
   response: '{"id":13,"name":"The Citizens","slug":"13-the-citizens","created_at":"2013-02-21T22:57:12Z","updated_at":"2013-02-21T22:57:12Z","member_count":2}')
+
+- data.resources.groups.endpoints.each do |ep|
+  =endpoint(ep)

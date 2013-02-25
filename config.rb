@@ -4,6 +4,9 @@ set :markdown_engine, :redcarpet
 #Livereload
 activate :livereload
 
+# middleman-syntax gem
+activate :syntax
+
 ### 
 # Compass
 ###

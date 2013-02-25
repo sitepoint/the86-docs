@@ -22,8 +22,9 @@
   %dt Response
   %dd 
     - if response && !response.empty?
-      %pre
-        :preserve
-          #{escape_once(JSON.pretty_generate(JSON.parse(response)))}
+      - if response.kind_of?(String)
+        =partial("json_pretty_print", locals: { json_string: response } )
+      - else
+        =partial("dfs_dl", locals: { node: response } )
     - else
       None

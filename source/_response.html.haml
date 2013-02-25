@@ -1,0 +1,14 @@
+-# local 'response'
+%dl
+  %dt Status
+  %dd
+    =h response["status"].to_s
+    =data.http_status_codes.definitions[response.delete("status")]
+  - if response.has_key?("body")
+    %dt Body
+    %dd=partial("json_pretty_print", locals: { json_string: response.delete("body") } )
+  - response.each do |k, v|
+    %dt
+      =k.to_s
+    %dd
+      =partial("dfs_dl", locals: { node: v })

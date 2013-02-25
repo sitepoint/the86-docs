@@ -21,6 +21,7 @@ endpoints:
     parameters: "None"
     example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19
     response:
+      status: 200
       body: >
         {"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"}
 

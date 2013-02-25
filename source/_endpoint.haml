@@ -21,7 +21,6 @@
   %dt Response
   %dd 
     - if response && !response.empty?
-      - body = response["body"]
-      =partial("dfs_dl", locals: { node: response } )
+      =partial("response", locals: { response: response } )
     - else
       None

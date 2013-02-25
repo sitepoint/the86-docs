@@ -7,14 +7,8 @@
   %dl
     - node.each do |k, v|
       %dt
-        =k.to_s
+        =h k.to_s
       %dd
-        - if k == "body"
-          =partial("json_pretty_print", locals: { json_string: v } )
-        - elsif k == 'status'
-          =h v.to_s
-          =data.http_status_codes.definitions[v]
-        - else
-          =partial("dfs_dl", locals: { node: v })
+        =partial("dfs_dl", locals: { node: v })
 - else
   =h node.to_s

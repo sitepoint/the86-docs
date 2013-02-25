@@ -1,3 +1,20 @@
 %article#introduction
 
   %h1 Introduction
+
+  %p
+    Most of Podling's functionality can be accessed via its
+    JSON over HTTPS API. The API is known as “the86”.
+
+  %p
+    Each user has an authentication token which can be used to make API
+    requests. A valid username and password can be exchanged for this API
+    access token.
+
+  %p
+    API URL paths include the major version number of the API, and a
+    path to the resource (item or collection). For example,
+    <code>/api/v1/groups/test-group/conversations/123/posts</code>
+    represents the collection of Posts in a Conversation. It responds
+    to <code>GET</code> and <code>POST</code> requests to list and create
+    Posts, respectively.

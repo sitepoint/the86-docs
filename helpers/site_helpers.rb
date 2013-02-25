@@ -7,7 +7,7 @@ module SiteHelpers
     end
     title
   end
-  
+
   def page_description
     if data.page.description
       description = data.page.description

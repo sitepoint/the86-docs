@@ -1,1 +1,16 @@
 %h1 Versioning
+
+%p
+  Podling's API attempts to adhere to
+  = link_to("Semantic Versioning", "http://semver.org/") + ","
+  with the major <code>X</code> component of the <code>X.Y.Z</code>
+  version number exposed in the URL path.
+
+%p
+  An example of a version one API URL is:
+  %code https://podling.com/api/v1/users/3
+
+%p
+  If and when the major version component is incremented, representing
+  non-backwards-compatible changes, the previous version should be supported for
+  a reasonable period of time.

@@ -4,11 +4,14 @@
     %dd
       =partial("dfs_dl", locals: { node: v })
 - elsif node.kind_of?(Hash)
-  %dl
-    - node.each do |k, v|
-      %dt
-        =k.to_s
-      %dd
-        =partial("dfs_dl", locals: { node: v })
+  - if node.has_key?("key")
+    =partial("parameter", locals: { parameter: node })
+  - else
+    %dl
+      - node.each do |k, v|
+        %dt
+          =k.to_s
+        %dd
+          =partial("dfs_dl", locals: { node: v })
 - else
   =h node.to_s

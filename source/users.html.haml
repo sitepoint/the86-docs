@@ -9,19 +9,6 @@
   response: %q{{"id":10,"name":"\"Matt\"","email":null,"avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T03:30:03Z","url":"http://learnable.vm:3000/api/v1/users/10","access_tokens":[{"created_at":"2013-02-21T03:30:03Z","id":8,"token":"YOG_81weQhXg4hyhMf8Z2TdZ28dpHU4BCR7Ux9l3Ql4","updated_at":"2013-02-21T03:30:03Z","user_id":10}]}} )
 -#  response: Net::HTTP.post_form(URI("http://learnable.vm:3000/api/v1/users"), "name" => "matt").body )
 
-=endpoint(title: "Retrieving a user",
-  action: "GET /users/:user_id",
-  parameters: "None",
-  response: {"id"=>10,"name"=>"\"Matt\"","email"=>nil,"avatar_url"=>nil,"twitter_username"=>nil,"profile"=>nil,"location"=>nil,"created_at"=>"2013-02-21T03:30:03Z","url"=>"http://learnable.vm:3000/api/v1/users/10"} )
-
-=endpoint(title: "Updating a User",
-  action: "PATCH /users/:user_id",
-  parameters: { o("name: String") => "Must be longer than 4 Characters" },
-  response: "" )
-
-=endpoint(title: "Logging in as a user",
-  subtitle: "Used to retreive a token",
-  action: "POST /users/authenticate",
-  parameters: "None",
-  response: {"user"=>{"id"=>14,"name"=>"\"TestUser\"","email"=>"\"t1@t1.com\"","avatar_url"=>nil,"twitter_username"=>nil,"profile"=>nil,"location"=>nil,"created_at"=>"2013-02-21T04:47:16Z","url"=>"http://learnable.vm:3000/api/v1/users/14"},"user_access_token"=>"Rowu88I7cuwUffPWccgCIfjV6NraOM0BfWFureuDt2o"} )
+- data.resources.users.endpoints.each do |ep|
+  =endpoint(ep)
 

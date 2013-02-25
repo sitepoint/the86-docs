@@ -9,6 +9,10 @@
       %dt
         =k.to_s
       %dd
-        =partial("dfs_dl", locals: { node: v })
+        - if k == "body"
+          =partial("json_pretty_print", locals: { json_string: v } )
+        - else
+          hi
+          =partial("dfs_dl", locals: { node: v })
 - else
   =h node.to_s

@@ -17,14 +17,11 @@
   - if example
     %dt Example using CURL
     %dd 
-      -code("bash") do
-        =example
+      -code("bash") { example }
   %dt Response
   %dd 
     - if response && !response.empty?
-      - if response.kind_of?(String)
-        =partial("json_pretty_print", locals: { json_string: response } )
-      - else
-        =partial("dfs_dl", locals: { node: response } )
+      - body = response["body"]
+      =partial("dfs_dl", locals: { node: response } )
     - else
       None

@@ -281,6 +281,7 @@ posts:
         status: 200
 				"Content-Type": application/json
         body: >
+          {"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-25T06:02:49Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"},"likes":[],"hidden_by_user":true,"hidden_by_group":false,"hidden_by_administrator":false}
 
     - title: Like a Post
       subtitle: Adds a 'Like' to a Post by the authenticated user

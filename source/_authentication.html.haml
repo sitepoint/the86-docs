@@ -20,3 +20,45 @@
   %p
     Attempting an API request not permitted by the provided <code>Authentication</code>
     header will result in a `403 Forbidden` response.
+
+  %p
+    An email address and password may be exchanged for a
+    <code>user_access_token</code> to be used as a bearer token by
+    <code>POST</code>ing to <code>/api/v1/users/authenticate</code>.
+
+  - code(:http) do
+    :plain
+      POST /api/v1/users/authenticate HTTP/1.1
+      Host: podling.com
+      Content-Type: application/json; charset=utf-8
+      Accept: application/json
+      User-Agent: HTTPie/0.2.7dev
+
+      {
+          "email": "john@example.org",
+          "password": "secret"
+      }
+
+  - code(:http) do
+    :plain
+      HTTP/1.1 200 OK
+      Content-Type: application/json; charset=utf-8
+      Etag: "dd60d92e26130f2437e6530870d228bd"
+      Cache-Control: max-age=0, private, must-revalidate
+      Date: Tue, 26 Feb 2013 01:26:51 GMT
+      Content-Length: 455
+
+      {
+          "user": {
+              "avatar_url": "https://api.twitter.com/1/users/profile_image/johncitizen",
+              "created_at": "2012-10-25T10:44:45Z",
+              "email": "john@example.org",
+              "id": 123,
+              "location": "Melbourne, Australia",
+              "name": "John Citizen",
+              "profile": "Just a regular citizen",
+              "twitter_username": "johncitizen",
+              "url": "https://podling.com/api/v1/users/123"
+          },
+          "user_access_token": "q-IdfBsampletokenziKTMxQ7zZ1zzt-JWd2oAXLp13"
+      }

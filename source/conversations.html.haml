@@ -2,38 +2,29 @@
 title: Conversations
 ---
 
-%h1 Conversation
+%article#conversation
 
-%p 
-  A Conversation has one or more posts, and exactly one original post.
-  The original post is the what 'kicks off' the conversation, and the content
-  is provided on creation of the conversation.
+  %h1 Conversation
 
-%p
-  Subresources: 
-  =link_to("Posts", posts_path)
+  %p
+    A Conversation has one or more posts, and exactly one original post.
+    The original post is the what 'kicks off' the conversation, and the content
+    is provided on creation of the conversation.
 
-%h3 Hiding conversations
-%p
-  -#TODO: Figure this out
-  A Conversation may be hidden or unhidden via the PATCH endpoint.
-  A hidden conversation is treated as non-existant by the indexing actions
-  of the API...?
+  %p
+    Subresources:
+    =link_to("Posts", posts_path)
 
-%h3 Muting conversations
-%p
-  Each user may individually mute any conversation in any group in which they
-  are a member. The user will no longer receive email notifications regarding
-  activity in muted conversations.
+  %h3 Hiding conversations
+  %p
+    A Conversation may be hidden or unhidden via the PATCH endpoint.
+    Hidden conversations will not be listed by other API actions.
 
-- data.resources_conversations.endpoints.each do |ep|
-  = endpoint(ep)
+  %h3 Muting conversations
+  %p
+    Each user may individually mute any conversation in any group in which they
+    are a member. The user will no longer receive email notifications regarding
+    activity in muted conversations.
 
-
-
-
-
-
-
-
-
+  - data.resources_conversations.endpoints.each do |ep|
+    = endpoint(ep)

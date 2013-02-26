@@ -21,11 +21,35 @@
     For each validation error that occured, the errors array in the response
     JSON container a resource name, field name and message.
 
-  - code("json") do
+  - code(:http) do
     :plain
+      POST /api/v1/users/123 HTTP/1.1
+      X-Http-Method-Override: PATCH
+      Host: podling.com
+      Accept: application/json
+      Content-Type: application/json; charset=utf-8
+      User-Agent: HTTPie/0.2.7dev
+      Authorization: Bearer q-IdfBsampletokenziKTMxQ7zZ1zzt-JWd2oAXLp13
+
       {
-        "message": "Validation Failed",
-        "errors": [
-          {"resource": "User", "field": "name", "message": "missing field"}
-        ]
+          "name": ""
+      }
+
+  - code(:http) do
+    :plain
+      HTTP/1.1 422 Unprocessable Entity
+      Content-Type: application/json; charset=utf-8
+      Cache-Control: no-cache
+      Date: Tue, 26 Feb 2013 00:40:10 GMT
+      Content-Length: 105
+
+      {
+          "errors": [
+              {
+                  "field": "name",
+                  "message": "can't be blank",
+                  "resource": "User"
+              }
+          ],
+          "message": "Validation failed."
       }

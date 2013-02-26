@@ -7,6 +7,12 @@
     The representation of a resource may contain nested child and parent resources.
 
   %p
+    Collections may be paginated. This is indicated by the
+    <code>rel="next"</code> item of the <code>Link</code> HTTP header, which
+    provides the URL of the next page in the collection. The presence of this
+    header means there is another page, the absence means there is not.
+
+  %p
     This is a (truncated) example of a paginated collection of Conversations.
     The outer data type is a JSON array.
     The <code>Link</code> HTTP header points to the next page in the collection.

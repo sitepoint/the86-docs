@@ -1,6 +1,9 @@
 #Markdown
 set :markdown_engine, :redcarpet
 
+# HAML
+set :haml, {ugly: true}
+
 #Livereload
 activate :livereload
 

@@ -8,4 +8,9 @@ gem "redcarpet"
 
 gem "middleman-syntax"
 
-#gem 'coffee-filter' # Coffeescript filter for HAML
+# Test library, contains MiniTest::Spec.
+# Also in Ruby stdlib, but gem may be be newer / better.
+gem "minitest"
+
+# Output formatter for MiniTest, much like RSpec's --format=documentation
+gem "turn"

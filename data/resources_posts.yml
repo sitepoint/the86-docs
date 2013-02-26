@@ -3,34 +3,34 @@ endpoints:
     action: GET /api/v1/groups/:group_id/conversations/:conversation_id/posts
     parameters: None
     examples:
-      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts
+      curl: curl -H "Authorization:Bearer $token" https://podling.com/api/v1/groups/13-the-citizens/conversations/10/posts
     response:
       status: 200
       "Content-Type": application/json
       body: >
-        [{"id":36,"content":"Hey, this is great!","content_html":"<p>Hey, this is great!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-21T23:03:57Z","updated_at":"2013-02-21T23:03:57Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"},"likes":[]},{"id":37,"content":"It sure is!","content_html":"<p>It sure is!</p>","is_original":false,"in_reply_to_id":36,"created_at":"2013-02-21T23:05:48Z","updated_at":"2013-02-21T23:05:48Z","attachments":[],"user":{"id":20,"name":"Mary Citizen","email":"mary@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T23:00:06Z","url":"http://learnable.vm:3000/api/v1/users/20"},"in_reply_to":{"id":36,"content":"Hey, this is great!","content_html":"<p>Hey, this is great!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-21T23:03:57Z","updated_at":"2013-02-21T23:03:57Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"}},"likes":[]}]
+        [{"id":36,"content":"Hey, this is great!","content_html":"<p>Hey, this is great!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-21T23:03:57Z","updated_at":"2013-02-21T23:03:57Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"https://podling.com/api/v1/users/19"},"likes":[]},{"id":37,"content":"It sure is!","content_html":"<p>It sure is!</p>","is_original":false,"in_reply_to_id":36,"created_at":"2013-02-21T23:05:48Z","updated_at":"2013-02-21T23:05:48Z","attachments":[],"user":{"id":20,"name":"Mary Citizen","email":"mary@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T23:00:06Z","url":"https://podling.com/api/v1/users/20"},"in_reply_to":{"id":36,"content":"Hey, this is great!","content_html":"<p>Hey, this is great!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-21T23:03:57Z","updated_at":"2013-02-21T23:03:57Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"https://podling.com/api/v1/users/19"}},"likes":[]}]
 
   - title: Create a Post
     action: POST /api/v1/groups/:group_id/conversations/:conversation_id/posts
     parameters: "content : String"
     examples:
-      curl: curl -d"content=A%20new%20post!!" -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts
+      curl: curl -d"content=A%20new%20post!!" -H "Authorization:Bearer $token" https://podling.com/api/v1/groups/13-the-citizens/conversations/10/posts
     response:
       status: 201
       "Content-Type": application/json
       body: >
-        {"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-22T04:41:18Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"},"likes":[]}
+        {"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-22T04:41:18Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"https://podling.com/api/v1/users/19"},"likes":[]}
 
   - title: Show a Post
     action: GET /api/v1/groups/:group_id/conversations/:conversation_id/posts/:post_id
     parameters: None
     examples:
-      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/39
+      curl: curl -H "Authorization:Bearer $token" https://podling.com/api/v1/groups/13-the-citizens/conversations/10/posts/39
     response:
       status: 200
       "Content-Type": application/json
       body: >
-        {"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-22T04:41:18Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"},"likes":[]}
+        {"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-22T04:41:18Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"https://podling.com/api/v1/users/19"},"likes":[]}
 
   - title: Update a Post
     subtitle: Used only to hide or show posts. Post content can not be modified.
@@ -39,30 +39,30 @@ endpoints:
       "hidden_by_user : Boolean" : "Signal that a user is hiding the post. The user must be the owner of the post." 
       "hidden_by_administrator : Boolean" : "Signal that an administrator of the group is hiding the post."
     examples:
-      curl: curl -X PATCH -d'hidden_by_user=true' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/39
+      curl: curl -X PATCH -d'hidden_by_user=true' -H "Authorization:Bearer $token" https://podling.com/api/v1/groups/13-the-citizens/conversations/10/posts/39
     response:
       status: 200
       "Content-Type": application/json
       body: >
-        {"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-25T06:02:49Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"},"likes":[],"hidden_by_user":true,"hidden_by_group":false,"hidden_by_administrator":false}
+        {"id":39,"content":"A new post!!","content_html":"<p>A new post!!</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-22T04:41:18Z","updated_at":"2013-02-25T06:02:49Z","attachments":[],"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"https://podling.com/api/v1/users/19"},"likes":[],"hidden_by_user":true,"hidden_by_group":false,"hidden_by_administrator":false}
 
   - title: Like a Post
     subtitle: Adds a 'Like' to a Post by the authenticated user
     action: POST /api/v1/groups/:group_id/conversations/:conversation_id/posts/:post_id/likes
     parameters: None
     examples:
-      curl: curl -d'' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/37/likes
+      curl: curl -d'' -H "Authorization:Bearer $token" https://podling.com/api/v1/groups/13-the-citizens/conversations/10/posts/37/likes
     response:
       status: 200
       "Content-Type": application/json
       body: >
-        {"id":26,"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"http://learnable.vm:3000/api/v1/users/19"}}
+        {"id":26,"user":{"id":19,"name":"John Citizen","email":"john@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-21T22:54:17Z","url":"https://podling.com/api/v1/users/19"}}
 
   - title: Unlike a Post
     subtitle: Remove a 'Like' from a Post. Users can only remove their own likes.
     action: DELETE /api/v1/groups/:group_id/conversations/:conversation_id/posts/:post_id/likes/:like_id
     parameters: None
     examples:
-      curl: curl -X DELETE -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/37/likes/26
+      curl: curl -X DELETE -H "Authorization:Bearer $token" https://podling.com/api/v1/groups/13-the-citizens/conversations/10/posts/37/likes/26
     response:
       status: 204

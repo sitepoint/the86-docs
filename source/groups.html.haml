@@ -1,9 +1,15 @@
-%h1 Groups resource
+---
+title: Group
+---
 
-%p A Group has one or more administrators (Users). A Group is referenced in an endpoint with the group's slug
-%p
-  Subresources: 
-  =link_to("Conversations", conversations_path)
+%article#group
 
-- data.resources_groups.endpoints.each do |ep|
-  =endpoint(ep)
+  %h1 Group
+
+  %p A Group has one or more administrators (Users). A Group is referenced in an endpoint with the group's slug
+  %p
+    Subresources: 
+    =link_to("Conversations", conversations_path)
+
+  - data.resources_groups.endpoints.each do |ep|
+    = endpoint(ep)

@@ -18,8 +18,13 @@ module SiteHelpers
   end
 
   def endpoint(locals = {})
+    endpoint_data = locals
+
     defaults = {subtitle: nil}
     all_locals = defaults.merge(locals)
+
+    all_locals[:example] = ApiExample.new("podling.com", endpoint_data)
+
     partial("endpoint", locals: all_locals)
   end
 end

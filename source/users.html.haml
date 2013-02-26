@@ -1,9 +1,6 @@
--# require 'net/http'
+%article#user
 
-%h1 Users resource
+  %h1 User
 
--#  response: Net::HTTP.post_form(URI("http://learnable.vm:3000/api/v1/users"), "name" => "matt").body )
-
-- data.resources_users.endpoints.each do |ep|
-  =endpoint(ep)
-
+  - data.resources_users.endpoints.each do |ep|
+    = endpoint(ep)

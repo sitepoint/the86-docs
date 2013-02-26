@@ -1,20 +1,28 @@
+%h2= title
 
-%h2=title
-%p=subtitle
-%dl
-  %dt Endpoint
-  %dd=action
-  %dt Parameters
-  - if parameters.kind_of?(Array)
-    -parameters.each do |p|
-      %dd
-        =partial("parameter", locals: { parameter: p })
-  - else
-    %dd
-      =parameters.to_s
-  %dt Examples
-  %dd
-    %dl=partial("examples", locals: { examples: examples } )
-  %dt Response
-  %dd 
-    =partial("response", locals: { response: response } )
+%p= subtitle
+
+- code(:http) do
+  = example.http_request
+
+- if example.parameters?
+  %table.table
+    -# %tr
+    -#   %th Key
+    -#   %th Type
+    -#   %th Description
+    - example.parameters.each do |parameter|
+      %tr
+        %td
+          %strong= parameter["key"]
+          - if parameter["optional"]
+            %em (optional)
+        %td= parameter["type"]
+        %td= parameter["description"]
+
+- code(:http) do
+  = example.http_response
+
+%dt Examples
+%dd
+  %dl=partial("examples", locals: { examples: examples } )

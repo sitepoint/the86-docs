@@ -13,7 +13,8 @@
     %dd
       =parameters.to_s
   %dt Examples
-  %dd=partial("dfs_dl", locals: { node: examples } )
+  %dd
+    %dl=partial("examples", locals: { examples: examples } )
   %dt Response
   %dd 
     - if response && !response.empty?

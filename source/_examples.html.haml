@@ -1,0 +1,16 @@
+-# locals: examples
+- if examples.has_key?("curl")
+  %dt Curl
+  %dd
+    =code("bash") do
+      =examples["curl"]
+- if examples.has_key?("ruby")
+  %dt Ruby
+  %dd
+    =code("ruby") do
+      =examples["ruby"]
+- if examples.has_key?("php")
+  %dt php
+  %dd
+    =code("php") do
+      =examples["php"]

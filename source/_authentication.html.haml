@@ -1,0 +1,22 @@
+%article#authentication
+
+  %h1 Authentication
+
+  %p
+    Authentication is implemented using
+    = link_to "OAuth 2.0 Bearer Tokens", "http://tools.ietf.org/html/rfc6750"
+    in the
+    <code>Authorization</code> HTTP header.
+
+  %p
+    This is not a full implementation of OAuth 2.0.
+    Only the name and format of the <code>Authorization</code> header is used.
+    API clients must obtain this authentication token via a non-OAuth-2.0 method.
+
+  %p
+    Attempting an API request without the required <code>Authentication</code>
+    header will result in a `401 Unauthorized` response.
+
+  %p
+    Attempting an API request not permitted by the provided <code>Authentication</code>
+    header will result in a `403 Forbidden` response.

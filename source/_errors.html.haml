@@ -1,0 +1,31 @@
+%article#errors
+
+  %h1 Errors
+
+  %p
+    Error responses are represented by a suitable HTTP code
+    (e.g. <code>404 Not Found</code> or <code>422 Unprocessable Entity</code>)
+    and a JSON response body containing a message attribute.
+
+  %p
+    Some types of error will extend this response body with additional
+    attributes.
+
+  %h2 Validation Errors
+
+  %p
+    A validation error encountered while creating a resource is represented by a
+    <code>422 Unprocessable Entity</code> response.
+
+  %p
+    For each validation error that occured, the errors array in the response
+    JSON container a resource name, field name and message.
+
+  - code("json") do
+    :plain
+      {
+        "message": "Validation Failed",
+        "errors": [
+          {"resource": "User", "field": "name", "message": "missing field"}
+        ]
+      }

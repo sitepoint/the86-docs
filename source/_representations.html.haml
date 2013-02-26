@@ -1,0 +1,69 @@
+%article#representations
+
+  %h1 Representations
+
+  %p
+    Resources are represented as JSON; either a single object, or an array of objects.
+    The representation of a resource may contain nested child and parent resources.
+
+  %p
+    This is a (truncated) example of a paginated collection of Conversations.
+    The outer data type is a JSON array.
+    The <code>Link</code> HTTP header points to the next page in the collection.
+    Each conversation contains an array of <code>Posts</code> (in this case, only one).
+    Each <code>Post</code> contains subresources such as <code>Like</code>s,
+    and a representation of the <code>User</code> that created the <code>Post</code>.
+
+  - code("http") do
+    :plain
+      GET /api/v1/groups/abc/conversations HTTP/1.1
+      Authorization: Bearer AUTH_TOKEN_HERE
+      Host: podling.com
+      Accept-Encoding: identity, deflate, compress, gzip
+      Accept: */*
+      User-Agent: HTTPie/0.2.7dev
+
+  - code("http") do
+    :plain
+      HTTP/1.1 200 OK
+      Link: <https://podling.com/api/v1/groups/abc/conversations?bumped_before=2012-11-14T04%3A13%3A09Z>; rel="next"
+      Content-Type: application/json; charset=utf-8
+      Etag: "30888cf59c9c7b7faac5ed55d9d69b80"
+      Cache-Control: max-age=0, private, must-revalidate
+      Vary: Accept-Encoding
+      Server: …
+      Date: Mon, 25 Feb 2013 06:46:04 GMT
+      Content-Length: …
+
+      [
+        {
+          "bumped_at": "2013-02-12T05:52:42Z",
+          "created_at": "2013-02-12T05:52:42Z",
+          "id": 2079,
+          "posts": [
+            {
+              "attachments": [],
+              "content": "Test",
+              "content_html": "<p>Test</p>",
+              "created_at": "2013-02-12T05:52:42Z",
+              "id": 8743,
+              "in_reply_to_id": null,
+              "is_original": true,
+              "likes": [],
+              "updated_at": "2013-02-12T05:52:42Z",
+              "user": {
+                "avatar_url": null,
+                "created_at": "2013-02-06T04:37:35Z",
+                "email": "john@example.org",
+                "id": 5479,
+                "location": null,
+                "name": "John Citizen",
+                "profile": null,
+                "twitter_username": null,
+                "url": "https://podling.com/api/v1/users/5479"
+              }
+            }
+          ],
+          "updated_at": "2013-02-12T05:52:42Z"
+        }
+      ]

@@ -1,0 +1,81 @@
+require "stringio"
+require "json"
+
+class ApiExample
+
+  # host is the string used in the Host header, e.g. example.org.
+  # data is a nested structure loaded from YAML.
+  def initialize(host, data)
+    @host = host
+    @data = data
+  end
+
+  # A multi-line string representation of the HTTP request.
+  def http_request
+    lines = []
+
+    lines << data[:action] + " HTTP/1.1"
+
+    lines << "Host: #{host}"
+
+    unless data[:authorization] == false
+      lines << "Authorization: Bearer USER_ACCESS_TOKEN"
+    end
+
+    if parameters?
+      lines << "Content-Type: application/json; charset=utf-8"
+    end
+
+    lines.join("\n")
+  end
+
+  # A multi-line string representation of the HTTP response.
+  def http_response
+    lines = []
+    response = data[:response]
+
+    lines << status_line(response)
+
+    if response[:content_type]
+      lines << "Content-Type: #{response[:content_type]}"
+    end
+
+    if response[:body]
+      lines << ""
+      lines << JSON.pretty_generate(JSON.parse(response.body))
+    end
+
+    lines.join("\n")
+  end
+
+  # Whether there are request parameters described.
+  def parameters?
+    parameters && parameters.any?
+  end
+
+  # Request parameter descriptions.
+  def parameters
+    @data[:parameters]
+  end
+
+  private
+
+  attr_reader :data
+  attr_reader :host
+
+  def status_line(response_data)
+    status = response_data[:status].to_i
+    "HTTP/1.1 %d %s" % [status, status_text(status)]
+  end
+
+  def status_text(status)
+    case status
+    when 201 then "Created"
+    when 200 then "OK"
+    when 204 then "No Content"
+    when 302 then "Found"
+    else raise "Unhandled HTTP status: #{status}"
+    end
+  end
+
+end

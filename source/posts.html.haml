@@ -2,8 +2,27 @@
 title: "Posts"
 ---
 
-%h1 Posts resource
+%article#post
 
-- data.resources_posts.endpoints.each do |ep|
-  =endpoint(ep)
+  %h1 Post
 
+  %p
+    A post represents a message inside a conversation, created by a user.
+    The original post differs from the others only in the <code>is_original</code>
+    boolean attribute.
+
+  %p
+    The <code>content</code> attribute of a post represents the text submitted
+    by the post author. The <code>content_html</code> attribute prodives a
+    version converted to HTML, with URLs linked etc.
+
+  %p
+    Posts may be hidden by their author or by the group administrator.
+    This is a form of soft-deletion.
+
+  %p
+    Posts may be "liked" by members of the group to which the conversation
+    belongs.
+
+  - data.resources_posts.endpoints.each do |ep|
+    =endpoint(ep)

@@ -7,10 +7,11 @@ require_relative "../lib/api_example"
 describe ApiExample do
 
   let(:example) { ApiExample.new(host, data) }
-  let(:data) { {} }
   let(:host) { "example.org" }
 
   describe "#http_request" do
+
+    let(:request_lines) { example.http_request.split("\n") }
 
     describe "with only an action" do
       let(:data) { {action: "GET /some/path"} }
@@ -42,6 +43,16 @@ describe ApiExample do
         example.http_request.split("\n").must_include(
           "Content-Type: application/json; charset=utf-8"
         )
+      end
+    end
+
+    describe "with PATCH request" do
+      let(:data) { {action: "PATCH /path"} }
+      it "replaces verb with POST" do
+        request_lines.first.must_equal("POST /path HTTP/1.1")
+      end
+      it "uses X-Http-Method-Override" do
+        request_lines.must_include("X-Http-Method-Override: PATCH")
       end
     end
 

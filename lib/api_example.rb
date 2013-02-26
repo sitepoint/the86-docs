@@ -14,7 +14,11 @@ class ApiExample
   def http_request
     lines = []
 
-    lines << data[:action] + " HTTP/1.1"
+    method, override = method_and_override(data[:action])
+
+    lines << data[:action].sub(/^\w+/, method) + " HTTP/1.1"
+
+    lines << "X-Http-Method-Override: #{override}" if override
 
     lines << "Host: #{host}"
 
@@ -62,6 +66,18 @@ class ApiExample
 
   attr_reader :data
   attr_reader :host
+
+  def method_and_override(action)
+    override_verbs = ["PATCH"]
+
+    verb, path = action.split(" ")
+
+    if override_verbs.include?(verb)
+      ["POST", verb]
+    else
+      [verb, nil]
+    end
+  end
 
   def status_line(response_data)
     status = response_data[:status].to_i

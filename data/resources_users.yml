@@ -11,6 +11,7 @@ endpoints:
         description: Minimum 8 characters
         optional: true
     examples:
+      curl: curl -d 'name:John Citizen' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users
       ruby: >
         user = The86::Client.users.create(name: "John Citizen")
     response:

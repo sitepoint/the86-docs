@@ -17,7 +17,4 @@
     %dl=partial("examples", locals: { examples: examples } )
   %dt Response
   %dd 
-    - if response && !response.empty?
-      =partial("response", locals: { response: response } )
-    - else
-      None
+    =partial("response", locals: { response: response } )

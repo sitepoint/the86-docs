@@ -3,7 +3,8 @@ endpoints:
     subtitle: Lists groups for the authenticated user
     action: GET /groups
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups
     response:
       status: 200
       "Content-Type": application/json
@@ -17,7 +18,8 @@ endpoints:
       - key: name 
         type: String
         description: "Cannot be empty. Must contain at least one word-character [a-zA-Z0-9_]"
-    example: curl -d 'name=My%20New%20Pod' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups
+    examples:
+      curl: curl -d 'name=My%20New%20Pod' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups
     response:
       status: 201
       "Content-Type": application/json
@@ -28,14 +30,16 @@ endpoints:
     subtitle: Deletes a group. Authenticated user must be an administrator
     action: DELETE /groups/:group_slug
     parameters: None
-    example: curl -X DELETE -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/14-my-new-pod
+    examples:
+      curl: curl -X DELETE -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/14-my-new-pod
     response:
       status: 204
 
   - title: Showing a Group
     action: GET /groups/:group_slug
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens
     response:
       status: 200
       "Content-Type": application/json
@@ -49,7 +53,8 @@ endpoints:
       - key: email
         type: String
         optional: true
-    example: curl -d'' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/invitations
+    examples:
+      curl: curl -d'' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/invitations
     response:
       status: 201
       "Content-Type": application/json
@@ -60,7 +65,8 @@ endpoints:
     subtitle: Lists all the members of a Group, including administrators.
     action: GET /api/v1/groups/:group_id/members
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/members
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/members
     response:
       status: 200
       "Content-Type": application/json

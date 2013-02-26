@@ -2,7 +2,8 @@ endpoints:
   - title: Index Posts
     action: GET /api/v1/groups/:group_id/conversations/:conversation_id/posts
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts
     response:
       status: 200
       "Content-Type": application/json
@@ -12,7 +13,8 @@ endpoints:
   - title: Create a Post
     action: POST /api/v1/groups/:group_id/conversations/:conversation_id/posts
     parameters: "content : String"
-    example: curl -d"content=A%20new%20post!!" -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts
+    examples:
+      curl: curl -d"content=A%20new%20post!!" -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts
     response:
       status: 201
       "Content-Type": application/json
@@ -22,7 +24,8 @@ endpoints:
   - title: Show a Post
     action: GET /api/v1/groups/:group_id/conversations/:conversation_id/posts/:post_id
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/39
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/39
     response:
       status: 200
       "Content-Type": application/json
@@ -35,8 +38,8 @@ endpoints:
     parameters: 
       "hidden_by_user : Boolean" : "Signal that a user is hiding the post. The user must be the owner of the post." 
       "hidden_by_administrator : Boolean" : "Signal that an administrator of the group is hiding the post."
-    example: >
-      curl -X PATCH -d'hidden_by_user=true' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/39
+    examples:
+      curl: curl -X PATCH -d'hidden_by_user=true' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/39
     response:
       status: 200
       "Content-Type": application/json
@@ -47,8 +50,8 @@ endpoints:
     subtitle: Adds a 'Like' to a Post by the authenticated user
     action: POST /api/v1/groups/:group_id/conversations/:conversation_id/posts/:post_id/likes
     parameters: None
-    example: >
-      curl -d'' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/37/likes
+    examples:
+      curl: curl -d'' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/37/likes
     response:
       status: 200
       "Content-Type": application/json
@@ -59,7 +62,7 @@ endpoints:
     subtitle: Remove a 'Like' from a Post. Users can only remove their own likes.
     action: DELETE /api/v1/groups/:group_id/conversations/:conversation_id/posts/:post_id/likes/:like_id
     parameters: None
-    example: >
-      curl -X DELETE -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/37/likes/26
+    examples:
+      curl: curl -X DELETE -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/posts/37/likes/26
     response:
       status: 204

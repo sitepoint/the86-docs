@@ -5,7 +5,8 @@ endpoints:
     parameters: 
       "content : String" : "The content of the first post in the Conversation"
       "created_at : DateTime" : "For manually setting the creation time of the conversation and first post"
-    example: curl -d 'content=This%20is%20my%20first%20post' -H 'Authorization:Bearer $token' learnable.vm:3000/api/v1/groups/13-the-citizens/conversations
+    examples:
+      curl: curl -d 'content=This%20is%20my%20first%20post' -H 'Authorization:Bearer $token' learnable.vm:3000/api/v1/groups/13-the-citizens/conversations
     response:
       status: 201
       "Content-Type": application/json
@@ -15,7 +16,8 @@ endpoints:
   - title: Show a conversation
     action: GET /groups/:group_slug/conversations/:conversation_id
     parameters: None
-    example: 'curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10'
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10
     response:
       status: 200
       "Content-Type": application/json
@@ -26,7 +28,8 @@ endpoints:
     subtitle: Applies to only one group, specified by the URI
     action: GET /api/v1/groups/:group_slug/conversations
     parameters: None
-    example: 'curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations'
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations
     response:
       status: 200
       "Content-Type": application/json
@@ -37,7 +40,8 @@ endpoints:
     subtitle:
     action: GET /api/v1/users/:user_id/conversations
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/conversations
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/conversations
     response:
       status: 200
       "Content-Type": application/json
@@ -50,7 +54,8 @@ endpoints:
     parameters: 
       "hidden_by_user : Boolean" : "Signal that a user is hiding the conversation. The user must be the owner of the conversation." 
       "hidden_by_administrator : Boolean" : "Signal that an administrator of the group is hiding the conversation."
-    example: curl -X PATCH -d'hidden_by_user=true' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10
+    examples:
+      curl: curl -X PATCH -d'hidden_by_user=true' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10
     response:
       status: 200
       "Content-Type": application/json
@@ -61,8 +66,8 @@ endpoints:
     subtitle: Unsubscribe the authenticated user from a conversation
     action: POST /api/v1/groups/:group_id/conversations/:conversation_id/mute
     parameters: None
-    example: >
-      curl -d'' -H "Authorization:Bearer $token" -v learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/mute
+    examples:
+      curl: curl -d'' -H "Authorization:Bearer $token" -v learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/mute
       status: 200
       "Content-Type": application/json
     response:

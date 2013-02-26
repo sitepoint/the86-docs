@@ -18,7 +18,7 @@ module SiteHelpers
   end
 
   def endpoint(locals = {})
-    defaults = {subtitle: nil, example: nil}
+    defaults = {subtitle: nil}
     all_locals = defaults.merge(locals)
     partial("endpoint", locals: all_locals)
   end

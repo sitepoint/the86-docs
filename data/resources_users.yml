@@ -10,6 +10,9 @@ endpoints:
       - key: password
         description: Minimum 8 characters
         optional: true
+    examples:
+      ruby: >
+        user = The86::Client.users.create(name: "John Citizen")
     response:
       status: 201
       "Content-Type": application/json
@@ -19,7 +22,8 @@ endpoints:
   - title: "Retrieving a user"
     action: "GET /users/:user_id"
     parameters: "None"
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19
     response:
       status: 200
       body: >
@@ -34,7 +38,8 @@ endpoints:
         type: String
       - key: password
         type: String
-    example: curl -X PATCH -d 'name=John Johnson' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19
+    examples:
+      curl: curl -X PATCH -d 'name=John Johnson' -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19
     response:
       status: 200
       "Content-Type": application/json
@@ -45,7 +50,8 @@ endpoints:
     subtitle:
     action: GET /api/v1/users/:user_id/avatar
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/avatar
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/avatar
     response:
       status: 302
       "Content-Type": application/json
@@ -58,7 +64,8 @@ endpoints:
     parameters:
       - key: email
       - key: password
-    example: curl -d 'email=john@example.org&password=johnjohn' learnable.vm:3000/api/v1/users/authenticate
+    examples:
+      curl: curl -d 'email=john@example.org&password=johnjohn' learnable.vm:3000/api/v1/users/authenticate
     response:
       status: 200
       "Content-Type": application/json
@@ -69,7 +76,8 @@ endpoints:
     subtitle:
     action: GET /api/v1/users/:user_id/memberships
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/memberships
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/memberships
     response:
       status: 200
       "Content-Type": application/json
@@ -80,7 +88,8 @@ endpoints:
     subtitle:
     action: GET /api/v1/users/:user_id/posts
     parameters: None
-    example: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/posts
+    examples:
+      curl: curl -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/posts
     response:
       status: 200
       "Content-Type": application/json
@@ -91,6 +100,7 @@ endpoints:
     subtitle: Posts made by the user are left unchanged
     action: DELETE /api/v1/users/:user_id/memberships/:id
     parameters: None
-    example: curl -X DELETE -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/memberships/12
+    examples:
+      curl: curl -X DELETE -H "Authorization:Bearer $token" learnable.vm:3000/api/v1/users/19/memberships/12
     response:
       status: 204

@@ -1,6 +1,4 @@
 
--# Required locals: title, action, parameters, response
--# Optional: subtitle
 %h2=title
 %p=subtitle
 %dl
@@ -14,10 +12,8 @@
   - else
     %dd
       =parameters.to_s
-  - if example
-    %dt Example using CURL
-    %dd 
-      -code("bash") { example }
+  %dt Examples
+  %dd=partial("dfs_dl", locals: { node: examples } )
   %dt Response
   %dd 
     - if response && !response.empty?

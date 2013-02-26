@@ -68,8 +68,8 @@ endpoints:
     parameters: None
     examples:
       curl: curl -d'' -H "Authorization:Bearer $token" -v learnable.vm:3000/api/v1/groups/13-the-citizens/conversations/10/mute
-      status: 200
       "Content-Type": application/json
     response:
+      status: 200
 
 

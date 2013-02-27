@@ -10,7 +10,7 @@ The86 is the conversation API powering [Podling.com](https://podling.com/).
 There are client libraries:
 
 * [the86-client](https://github.com/sitepoint/the86-client) for Ruby.
-* [the86-php](https://github.com/sitepoint/the86-php) for PHP 5.4+
+* [the86-php](https://github.com/sitepoint/the86-php) for PHP 5.3+
 
 
 Working on the documentation

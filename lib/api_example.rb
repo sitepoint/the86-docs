@@ -31,7 +31,7 @@ class ApiExample
 
     lines << "Host: #{host}"
 
-    request[:headers].each_pair do |key, value|
+    (request[:headers] || {}).each_pair do |key, value|
       lines << "#{key}: #{value}"
     end
 
@@ -51,11 +51,11 @@ class ApiExample
 
     lines << status_line(response)
 
-    response[:headers].each_pair do |key, value|
+    (response[:headers] || {}).each_pair do |key, value|
       lines << "#{key}: #{value}"
     end
 
-    if response[:body].present?
+    if response[:body] && response[:body].match(/\S+/)
       lines << ""
       lines << JSON.pretty_generate(JSON.parse(response[:body]))
     end

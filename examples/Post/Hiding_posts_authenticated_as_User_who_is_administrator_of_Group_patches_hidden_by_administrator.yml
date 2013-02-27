@@ -1,10 +1,10 @@
 ---
-:title: Hiding posts
-:subtitle: Hiding posts authenticated as User who is administrator of Group patches
+:title: Hiding Posts
+:subtitle: Hiding Posts authenticated as User who is administrator of Group patches
   hidden_by_administrator
 :request:
   :verb: PATCH
-  :path: /api/v1/groups/110-group-107/conversations/111/posts/88
+  :path: /api/v1/groups/819-group-107/conversations/778/posts/675
   :data:
     :hidden_by_administrator: true
   :headers:
@@ -14,12 +14,12 @@
   :headers:
     Content-Type: application/json; charset=utf-8
     X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"68dede09f92883cbe6606019ed1a8c8a"'
+    ETag: ! '"4dced4646b41a1b914c9ae3be72b82fe"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      MDA2YjE1OWMwNzcwZWRlZjNmYjVkMDM0YjJiYWE3Zjc=
-    X-Runtime: '0.023614'
-    Content-Length: '536'
-  :body: ! '{"id":88,"content":"Post content goes here","content_html":"<p>Post content
-    goes here</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-27T10:23:06Z","updated_at":"2013-02-27T10:23:06Z","attachments":[],"user":{"id":202,"name":"OAuth
-    user","email":"user203@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:06Z","url":"http://www.example.com/api/v1/users/202"},"likes":[],"hidden_by_user":false,"hidden_by_group":false,"hidden_by_administrator":true}'
+      Mjg3ODNjMjFlMDJkMGU4MGU1ZWNhMWM4NDQ0NmE1MTk=
+    X-Runtime: '0.021674'
+    Content-Length: '539'
+  :body: ! '{"id":675,"content":"Post content goes here","content_html":"<p>Post content
+    goes here</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-27T15:23:27Z","updated_at":"2013-02-27T15:23:27Z","attachments":[],"user":{"id":1601,"name":"OAuth
+    user","email":"user203@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:27Z","url":"http://www.example.com/api/v1/users/1601"},"likes":[],"hidden_by_user":false,"hidden_by_group":false,"hidden_by_administrator":true}'

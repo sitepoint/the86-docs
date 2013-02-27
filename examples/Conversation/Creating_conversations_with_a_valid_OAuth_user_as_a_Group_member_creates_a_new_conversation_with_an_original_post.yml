@@ -1,10 +1,10 @@
 ---
-:title: Creating conversations
-:subtitle: Creating conversations with a valid OAuth user as a Group member creates
+:title: Creating Conversations
+:subtitle: Creating Conversations with a valid OAuth user as a Group member creates
   a new conversation with an original post
 :request:
   :verb: POST
-  :path: /api/v1/groups/12-group-12/conversations
+  :path: /api/v1/groups/721-group-12/conversations
   :data:
     :content: Conversation!
   :headers:
@@ -14,11 +14,11 @@
   :headers:
     Content-Type: application/json; charset=utf-8
     X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"0d1c8183ab2e114523aa2fa0776b5b97"'
+    ETag: ! '"6397d19fcf6eb180ae5cdca91a125513"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      Mjg0ODJhNTY2MWY2YWVhYzAyZjhjNWFmMmQ0OTZmZTU=
-    X-Runtime: '0.112342'
-    Content-Length: '558'
-  :body: ! '{"id":1,"created_at":"2013-02-27T10:23:02Z","updated_at":"2013-02-27T10:23:02Z","bumped_at":"2013-02-27T10:23:02Z","posts":[{"id":1,"content":"Conversation!","content_html":"<p>Conversation!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T10:23:02Z","updated_at":"2013-02-27T10:23:02Z","attachments":[],"user":{"id":5,"name":"OAuth
-    user","email":"user5@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:02Z","url":"http://www.example.com/api/v1/users/5"},"likes":[]}]}'
+      NGZiNGNiZmQ2NjgzMmEzYmU5MWMxOWJkNjRiNThjODI=
+    X-Runtime: '0.112267'
+    Content-Length: '568'
+  :body: ! '{"id":668,"created_at":"2013-02-27T15:23:23Z","updated_at":"2013-02-27T15:23:23Z","bumped_at":"2013-02-27T15:23:23Z","posts":[{"id":588,"content":"Conversation!","content_html":"<p>Conversation!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T15:23:23Z","updated_at":"2013-02-27T15:23:23Z","attachments":[],"user":{"id":1404,"name":"OAuth
+    user","email":"user5@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:23Z","url":"http://www.example.com/api/v1/users/1404"},"likes":[]}]}'

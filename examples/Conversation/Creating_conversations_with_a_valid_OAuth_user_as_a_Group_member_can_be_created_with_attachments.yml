@@ -1,10 +1,10 @@
 ---
-:title: Creating conversations
-:subtitle: Creating conversations with a valid OAuth user as a Group member can be
+:title: Creating Conversations
+:subtitle: Creating Conversations with a valid OAuth user as a Group member can be
   created with attachments
 :request:
   :verb: POST
-  :path: /api/v1/groups/14-group-14/conversations
+  :path: /api/v1/groups/723-group-14/conversations
   :data:
     :content: Conversation!
     :attachments:
@@ -19,11 +19,11 @@
   :headers:
     Content-Type: application/json; charset=utf-8
     X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"a673e604e54e38d3737665d6b0c8c933"'
+    ETag: ! '"384e0ee1d74d65ffcf784f09e9efd422"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      NTcwM2YyYzQ4ZDViNzViYTQ1NDVhZjU5ZWJiNzkyNTk=
-    X-Runtime: '0.041239'
-    Content-Length: '1545'
-  :body: ! '{"id":3,"created_at":"2013-02-27T10:23:02Z","updated_at":"2013-02-27T10:23:02Z","bumped_at":"2013-02-27T10:23:02Z","posts":[{"id":3,"content":"Conversation!","content_html":"<p>Conversation!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T10:23:02Z","updated_at":"2013-02-27T10:23:02Z","attachments":[{"url":"http://example.org","thumbnail_url":null,"filename":"test.png","mimetype":null,"size":null,"security":{"signature":"f400a218f1bdf0374c8a10e0cea917af71de5480a6d6a4775249612063db5d41","policy":"eyJoYW5kbGUiOiJleGFtcGxlLm9yZyIsImNhbGwiOlsicmVhZCIsImNvbnZlcnQiLCJwaWNrIl0sImV4cGlyeSI6MTM2MjA0Njk4Mn0="},"thumbnail_security":{"signature":"5404dde95df40d9f74fe268a6499685e7070518f1ef629e8ea6afc3db6961362","policy":"eyJjYWxsIjpbInJlYWQiLCJjb252ZXJ0IiwicGljayJdLCJleHBpcnkiOjEzNjIwNDY5ODJ9"}},{"url":"http://example.com","thumbnail_url":null,"filename":"test.gif","mimetype":null,"size":null,"security":{"signature":"0c85d42ebb45a64f61fcb044832124c0f2ca8df2737e05f4fbe0764a146742f0","policy":"eyJoYW5kbGUiOiJleGFtcGxlLmNvbSIsImNhbGwiOlsicmVhZCIsImNvbnZlcnQiLCJwaWNrIl0sImV4cGlyeSI6MTM2MjA0Njk4Mn0="},"thumbnail_security":{"signature":"5404dde95df40d9f74fe268a6499685e7070518f1ef629e8ea6afc3db6961362","policy":"eyJjYWxsIjpbInJlYWQiLCJjb252ZXJ0IiwicGljayJdLCJleHBpcnkiOjEzNjIwNDY5ODJ9"}}],"user":{"id":7,"name":"OAuth
-    user","email":"user7@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:02Z","url":"http://www.example.com/api/v1/users/7"},"likes":[]}]}'
+      MTNiOTlkMDNjYmM0ZjI2NmYwZTlmOGE0OWI0NDQ4NDU=
+    X-Runtime: '0.043427'
+    Content-Length: '1555'
+  :body: ! '{"id":670,"created_at":"2013-02-27T15:23:23Z","updated_at":"2013-02-27T15:23:23Z","bumped_at":"2013-02-27T15:23:23Z","posts":[{"id":590,"content":"Conversation!","content_html":"<p>Conversation!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T15:23:23Z","updated_at":"2013-02-27T15:23:23Z","attachments":[{"url":"http://example.org","thumbnail_url":null,"filename":"test.png","mimetype":null,"size":null,"security":{"signature":"fb695e429d83cc864192239db9318b9766188dbfd466367932815af8ba23cd69","policy":"eyJoYW5kbGUiOiJleGFtcGxlLm9yZyIsImNhbGwiOlsicmVhZCIsImNvbnZlcnQiLCJwaWNrIl0sImV4cGlyeSI6MTM2MjA2NTAwM30="},"thumbnail_security":{"signature":"752692298ab6f2193b20dff20b571bc178487cc9a7653a376cc8ddf46070aa39","policy":"eyJjYWxsIjpbInJlYWQiLCJjb252ZXJ0IiwicGljayJdLCJleHBpcnkiOjEzNjIwNjUwMDN9"}},{"url":"http://example.com","thumbnail_url":null,"filename":"test.gif","mimetype":null,"size":null,"security":{"signature":"c228e6c16dbbbc3a64447286c1bca3d41f3eb8cc8b6463017b4edf64d7290f58","policy":"eyJoYW5kbGUiOiJleGFtcGxlLmNvbSIsImNhbGwiOlsicmVhZCIsImNvbnZlcnQiLCJwaWNrIl0sImV4cGlyeSI6MTM2MjA2NTAwM30="},"thumbnail_security":{"signature":"752692298ab6f2193b20dff20b571bc178487cc9a7653a376cc8ddf46070aa39","policy":"eyJjYWxsIjpbInJlYWQiLCJjb252ZXJ0IiwicGljayJdLCJleHBpcnkiOjEzNjIwNjUwMDN9"}}],"user":{"id":1406,"name":"OAuth
+    user","email":"user7@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:23Z","url":"http://www.example.com/api/v1/users/1406"},"likes":[]}]}'

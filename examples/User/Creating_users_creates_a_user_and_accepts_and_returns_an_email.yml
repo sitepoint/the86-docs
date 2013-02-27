@@ -1,6 +1,6 @@
 ---
-:title: Creating users
-:subtitle: Creating users creates a user and accepts and returns an email
+:title: Creating Users
+:subtitle: Creating Users creates a user and accepts and returns an email
 :request:
   :verb: POST
   :path: /api/v1/users
@@ -14,10 +14,10 @@
   :headers:
     Content-Type: application/json; charset=utf-8
     X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"b733c794cf2f30dfa5af0400fbcfe353"'
+    ETag: ! '"aa400cc35a19220cbc4f71519ed99987"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      ZjRiYTgwMjYxYzc1MTdmNTEwODgzMDc3MGRkYzc0Yzk=
-    X-Runtime: '0.076970'
-    Content-Length: '384'
-  :body: ! '{"id":245,"name":"John Citizen","email":"john@example.com","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:08Z","url":"http://www.example.com/api/v1/users/245","access_tokens":[{"created_at":"2013-02-27T10:23:08Z","id":74,"token":"cTPekcgSAFPMFj_rZ-7DGWHnL9lO7YY7ZL_uHyVadMo","updated_at":"2013-02-27T10:23:08Z","user_id":245}]}'
+      M2RiNTEyMTUxMTZjZDlmMjc5NzNjZDkyZWI0NTNiZjk=
+    X-Runtime: '0.074232'
+    Content-Length: '388'
+  :body: ! '{"id":1644,"name":"John Citizen","email":"john@example.com","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:29Z","url":"http://www.example.com/api/v1/users/1644","access_tokens":[{"created_at":"2013-02-27T15:23:29Z","id":511,"token":"vx-u25oPrmmGvK_Bc9capEiJwsqLSW1tGiyBiidQKFY","updated_at":"2013-02-27T15:23:29Z","user_id":1644}]}'

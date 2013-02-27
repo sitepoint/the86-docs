@@ -4,7 +4,7 @@
   the conversation
 :request:
   :verb: POST
-  :path: /api/v1/groups/45-group-45/conversations/56/mute
+  :path: /api/v1/groups/754-group-45/conversations/723/mute
   :data: 
   :headers:
     Authorization: Bearer accesstoken39
@@ -14,6 +14,6 @@
     X-UA-Compatible: IE=Edge,chrome=1
     Cache-Control: no-cache
     X-Request-Id: !binary |-
-      YWQ0M2FiMWRjZGRhMDYzMzM5NDZlZmYxNWMzNTNjMTQ=
-    X-Runtime: '0.010859'
+      MWVjODRiMzMyZThhNDE1NmNiYTkzYWI5ODgyNTZkNGU=
+    X-Runtime: '0.010352'
   :body: ''

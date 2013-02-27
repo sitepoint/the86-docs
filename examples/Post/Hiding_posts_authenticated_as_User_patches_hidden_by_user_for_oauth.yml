@@ -1,9 +1,9 @@
 ---
-:title: Hiding posts
-:subtitle: Hiding posts authenticated as User patches hidden_by_user for oauth
+:title: Hiding Posts
+:subtitle: Hiding Posts authenticated as User patches hidden_by_user for oauth
 :request:
   :verb: PATCH
-  :path: /api/v1/groups/105-group-102/conversations/106/posts/77
+  :path: /api/v1/groups/814-group-102/conversations/773/posts/664
   :data:
     :hidden_by_user: true
   :headers:
@@ -13,12 +13,12 @@
   :headers:
     Content-Type: application/json; charset=utf-8
     X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"2374b60d1d9668ad64a73715ad01cb8b"'
+    ETag: ! '"b177759afd3d52259e9b03a66694fc10"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      MDk2Njg1MWY2NTBmMjRmOGU3N2E4NWVlYWUyNzlkOTU=
-    X-Runtime: '0.024050'
-    Content-Length: '536'
-  :body: ! '{"id":77,"content":"Post content goes here","content_html":"<p>Post content
-    goes here</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-27T10:23:06Z","updated_at":"2013-02-27T10:23:06Z","attachments":[],"user":{"id":191,"name":"OAuth
-    user","email":"user192@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:06Z","url":"http://www.example.com/api/v1/users/191"},"likes":[],"hidden_by_user":true,"hidden_by_group":false,"hidden_by_administrator":false}'
+      NWRiNjFiZmFkYzJhMmJkOGYyZTYxMDcxYjdhODQ5NWE=
+    X-Runtime: '0.021052'
+    Content-Length: '539'
+  :body: ! '{"id":664,"content":"Post content goes here","content_html":"<p>Post content
+    goes here</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-27T15:23:27Z","updated_at":"2013-02-27T15:23:27Z","attachments":[],"user":{"id":1590,"name":"OAuth
+    user","email":"user192@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:27Z","url":"http://www.example.com/api/v1/users/1590"},"likes":[],"hidden_by_user":true,"hidden_by_group":false,"hidden_by_administrator":false}'

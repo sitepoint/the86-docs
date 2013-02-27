@@ -1,9 +1,9 @@
 ---
-:title: Listing posts
-:subtitle: Listing posts authenticated as User with some posts returns a list of posts
+:title: Listing Posts
+:subtitle: Listing Posts authenticated as User with some posts returns a list of posts
 :request:
   :verb: GET
-  :path: /api/v1/groups/113-group-110/conversations/114/posts
+  :path: /api/v1/groups/822-group-110/conversations/781/posts
   :data: 
   :headers:
     Authorization: Bearer accesstoken89
@@ -12,12 +12,12 @@
   :headers:
     Content-Type: application/json; charset=utf-8
     X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"44a0b3b849bae07948b120a183bf0d56"'
+    ETag: ! '"244dd394c2da52f976934973bf300d60"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      OGZmYWNjZjNlZmFhNmI4MzZkMGQ0NzgxMDI0NDBhMzI=
-    X-Runtime: '0.015476'
-    Content-Length: '458'
-  :body: ! '[{"id":89,"content":"Post content goes here","content_html":"<p>Post content
-    goes here</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-27T10:23:06Z","updated_at":"2013-02-27T10:23:06Z","attachments":[],"user":{"id":209,"name":"User
-    151","email":"user210@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:06Z","url":"http://www.example.com/api/v1/users/209"},"likes":[]}]'
+      ZGU4OGQ3MWRmOGY3OTFiYzRjNmI0ZGJhMmM3MWRkNWM=
+    X-Runtime: '0.013929'
+    Content-Length: '461'
+  :body: ! '[{"id":676,"content":"Post content goes here","content_html":"<p>Post
+    content goes here</p>","is_original":false,"in_reply_to_id":null,"created_at":"2013-02-27T15:23:27Z","updated_at":"2013-02-27T15:23:27Z","attachments":[],"user":{"id":1608,"name":"User
+    151","email":"user210@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:27Z","url":"http://www.example.com/api/v1/users/1608"},"likes":[]}]'

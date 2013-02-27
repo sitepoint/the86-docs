@@ -24,5 +24,4 @@ title: "Posts"
     Posts may be "liked" by members of the group to which the conversation
     belongs.
 
-  - each_example("Post") do |example|
-    = partial("endpoint", locals: {example: example} )
+  = partial "examples", locals: {resource: "Post"}

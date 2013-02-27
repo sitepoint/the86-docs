@@ -1,16 +1,23 @@
--# locals: examples
-- if examples.has_key?("curl")
-  %dt Curl
-  %dd
-    =code("bash") do
-      =examples["curl"]
-- if examples.has_key?("ruby")
-  %dt Ruby
-  %dd
-    =code("ruby") do
-      =examples["ruby"]
-- if examples.has_key?("php")
-  %dt php
-  %dd
-    =code("php") do
-      =examples["php"]
+%ul
+  - examples(resource).grouped.each_pair do |grouping, examples|
+    %li
+      = link_to grouping.title, grouping.fragment
+      %em
+        = surround "(", ")" do
+          = pluralize examples.length, "example"
+
+
+- examples(resource).grouped.each_pair do |grouping, examples|
+
+  %section{id: grouping.id}
+    %h2= grouping.title
+
+    - examples("User").each do |example|
+
+      %p= example.subtitle
+
+      - code(:http) do
+        = example.http_request
+
+      - code(:http) do
+        = example.http_response

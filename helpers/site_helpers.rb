@@ -17,17 +17,9 @@ module SiteHelpers
     description
   end
 
-  # Usage
-  # <%- each_example("Group") do |example| %>
-  # ...
-  # <% end %>
-  def each_example(resource_name)
-    dir = Pathname("examples") + resource_name
-    Pathname.glob(dir + "*.yml").each do |path|
-      data = YAML.load(path.read)
-      example = ApiExample.new("podling.com", data)
-      yield(example)
-    end
+  def examples(resource_name)
+    ApiExampleCollection.load "podling.com",
+      Pathname("examples") + resource_name + "*.yml"
   end
 
 end

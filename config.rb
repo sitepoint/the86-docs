@@ -92,3 +92,4 @@ configure :build do
 end
 
 require "lib/api_example"
+require "lib/api_example_collection"

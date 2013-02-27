@@ -11,5 +11,4 @@ title: Group
     Subresources: 
     =link_to("Conversations", conversations_path)
 
-  - each_example("Group") do |example|
-    = partial("endpoint", locals: {example: example} )
+  = partial "examples", locals: {resource: "Group"}

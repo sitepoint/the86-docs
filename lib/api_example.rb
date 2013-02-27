@@ -89,6 +89,7 @@ class ApiExample
     when 200 then "OK"
     when 204 then "No Content"
     when 302 then "Found"
+    when 422 then "Unprocessable Entity"
     else raise "Unhandled HTTP status: #{status}"
     end
   end

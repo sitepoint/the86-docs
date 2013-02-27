@@ -1,0 +1,27 @@
+---
+:title: Creating posts
+:subtitle: Creating posts can reply to an individual post
+:request:
+  :verb: POST
+  :path: /api/v1/groups/99-group-96/conversations/101/posts
+  :data:
+    :content: You are WRONG on the internet!
+    :in_reply_to_id: 68
+  :headers:
+    Authorization: Bearer accesstoken77
+:response:
+  :status: 201
+  :headers:
+    Content-Type: application/json; charset=utf-8
+    X-UA-Compatible: IE=Edge,chrome=1
+    ETag: ! '"f5f16499f67ed68fe99249eda7277f12"'
+    Cache-Control: max-age=0, private, must-revalidate
+    X-Request-Id: !binary |-
+      YzE5NTQ3N2NjYWQ3ZDE0MTdjNzIxNzMyYzU5YWY2Y2Q=
+    X-Runtime: '0.031323'
+    Content-Length: '931'
+  :body: ! '{"id":69,"content":"You are WRONG on the internet!","content_html":"<p>You
+    are WRONG on the internet!</p>","is_original":false,"in_reply_to_id":68,"created_at":"2013-02-27T10:23:06Z","updated_at":"2013-02-27T10:23:06Z","attachments":[],"user":{"id":181,"name":"OAuth
+    user","email":"user182@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:06Z","url":"http://www.example.com/api/v1/users/181"},"in_reply_to":{"id":68,"content":"Post
+    content goes here","content_html":"<p>Post content goes here</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T10:23:06Z","updated_at":"2013-02-27T10:23:06Z","attachments":[],"user":{"id":182,"name":"User
+    135","email":"user183@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:06Z","url":"http://www.example.com/api/v1/users/182"}},"likes":[]}'

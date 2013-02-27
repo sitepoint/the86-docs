@@ -13,10 +13,10 @@
   :headers:
     Content-Type: application/json; charset=utf-8
     X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"057ad95f3ac32f0771c1d11a9f221151"'
+    ETag: ! '"8e5dcc69c1aa19ea6c6677f774c515c2"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      YTQwNGFhM2M1OThhNTUyZWZjYmJhMjE2N2ExYWJkMDI=
-    X-Runtime: '0.013919'
-    Content-Length: '143'
-  :body: ! '[{"id":1142,"name":"Group 80","slug":"1142-group-80","created_at":"2013-02-27T05:05:15Z","updated_at":"2013-02-27T05:05:15Z","member_count":1}]'
+      NWJhNDdhNTYyZmFjZDk0NjFjMGJjYmM3NjY2NzRmNTM=
+    X-Runtime: '0.013643'
+    Content-Length: '139'
+  :body: ! '[{"id":83,"name":"Group 80","slug":"83-group-80","created_at":"2013-02-27T10:23:05Z","updated_at":"2013-02-27T10:23:05Z","member_count":1}]'

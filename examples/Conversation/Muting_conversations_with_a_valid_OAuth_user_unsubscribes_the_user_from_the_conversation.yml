@@ -1,0 +1,19 @@
+---
+:title: Muting conversations
+:subtitle: Muting conversations with a valid OAuth user unsubscribes the user from
+  the conversation
+:request:
+  :verb: POST
+  :path: /api/v1/groups/45-group-45/conversations/56/mute
+  :data: 
+  :headers:
+    Authorization: Bearer accesstoken39
+:response:
+  :status: 204
+  :headers:
+    X-UA-Compatible: IE=Edge,chrome=1
+    Cache-Control: no-cache
+    X-Request-Id: !binary |-
+      YWQ0M2FiMWRjZGRhMDYzMzM5NDZlZmYxNWMzNTNjMTQ=
+    X-Runtime: '0.010859'
+  :body: ''

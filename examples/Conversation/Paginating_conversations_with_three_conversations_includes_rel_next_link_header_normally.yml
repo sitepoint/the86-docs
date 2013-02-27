@@ -1,0 +1,24 @@
+---
+:title: Paginating conversations
+:subtitle: Paginating conversations with three conversations includes rel=next link
+  header normally
+:request:
+  :verb: GET
+  :path: /api/v1/groups/49-group-49/conversations?limit=2
+  :data: 
+  :headers:
+    Authorization: Bearer accesstoken43
+:response:
+  :status: 200
+  :headers:
+    Content-Type: application/json; charset=utf-8
+    Link: <http://www.example.com/api/v1/groups/49-group-49/conversations?bumped_before=2013-02-27T09%3A23%3A04Z&limit=2>;
+      rel="next"
+    X-UA-Compatible: IE=Edge,chrome=1
+    ETag: ! '"e1092230893abc46dbdb8f27616a8c74"'
+    Cache-Control: max-age=0, private, must-revalidate
+    X-Request-Id: !binary |-
+      ZGExNjBlM2RkNmQzNjMxMmQxMmEyM2VlZGU1OThkZjI=
+    X-Runtime: '0.013703'
+    Content-Length: '257'
+  :body: ! '[{"id":65,"created_at":"2013-02-27T10:23:04Z","updated_at":"2013-02-27T10:23:04Z","bumped_at":"2013-02-27T10:23:04Z","posts":[]},{"id":66,"created_at":"2013-02-27T09:23:04Z","updated_at":"2013-02-27T10:23:04Z","bumped_at":"2013-02-27T09:23:04Z","posts":[]}]'

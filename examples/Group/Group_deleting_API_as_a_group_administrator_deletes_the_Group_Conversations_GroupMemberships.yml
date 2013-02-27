@@ -1,0 +1,19 @@
+---
+:title: Group deleting API
+:subtitle: Group deleting API as a group administrator deletes the Group, Conversations,
+  GroupMemberships
+:request:
+  :verb: DELETE
+  :path: /api/v1/groups/76-group-73
+  :data: 
+  :headers:
+    Authorization: Bearer accesstoken56
+:response:
+  :status: 204
+  :headers:
+    X-UA-Compatible: IE=Edge,chrome=1
+    Cache-Control: no-cache
+    X-Request-Id: !binary |-
+      OTM1NTI3Mjg1ZDEyYjdmMjYwZDU2ZjMwN2Y2ZGRhNmY=
+    X-Runtime: '0.018197'
+  :body: ''

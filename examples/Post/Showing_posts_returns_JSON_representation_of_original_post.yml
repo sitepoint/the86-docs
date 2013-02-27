@@ -3,7 +3,7 @@
 :subtitle: Showing posts returns JSON representation of original post
 :request:
   :verb: GET
-  :path: /api/v1/groups/1174-group-112/conversations/1044/posts/930
+  :path: /api/v1/groups/115-group-112/conversations/116/posts/94
   :data: 
   :headers:
     Authorization: Bearer accesstoken91
@@ -12,13 +12,13 @@
   :headers:
     Content-Type: application/json; charset=utf-8
     X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"a2d8f37a21326d3b0d8467bb0d65731e"'
+    ETag: ! '"c478a5e92d79ef97ec6fbbbb14418957"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      YjFhODE5ODU2ZWVjYzkyODg0ZDgxNzQ3Y2MxMDc2ODQ=
-    X-Runtime: '0.014040'
-    Content-Length: '585'
-  :body: ! '{"id":930,"content":"Hello http://example.org/ world.\nLine 2.\n\nLine
+      M2U2MzM2Yzc4N2IyZTZiZTViNjExYTA0ZjIyODg4MDg=
+    X-Runtime: '0.016718'
+    Content-Length: '582'
+  :body: ! '{"id":94,"content":"Hello http://example.org/ world.\nLine 2.\n\nLine
     4.","content_html":"<p>Hello <a href=\"http://example.org/\" target=\"_blank\">http://example.org/</a>
-    world.\n<br />Line 2.</p>\n\n<p>Line 4.</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T05:05:17Z","updated_at":"2013-02-27T05:05:17Z","attachments":[],"user":{"id":2305,"name":"User
-    158","email":"user218@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T05:05:17Z","url":"http://www.example.com/api/v1/users/2305"},"likes":[]}'
+    world.\n<br />Line 2.</p>\n\n<p>Line 4.</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T10:23:06Z","updated_at":"2013-02-27T10:23:06Z","attachments":[],"user":{"id":217,"name":"User
+    158","email":"user218@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T10:23:06Z","url":"http://www.example.com/api/v1/users/217"},"likes":[]}'

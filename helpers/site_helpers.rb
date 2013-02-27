@@ -1,7 +1,7 @@
 module SiteHelpers
 
   def page_title
-    title = "The86 Documentation"
+    title = "Podling Documentation"
     if data.page.title
       title << " | " + data.page.title
     end
@@ -9,12 +9,7 @@ module SiteHelpers
   end
 
   def page_description
-    if data.page.description
-      description = data.page.description
-    else
-      description = "The86 API Documentation"
-    end
-    description
+    data.page.description || "Podling API Documentation"
   end
 
   def examples(resource_name)

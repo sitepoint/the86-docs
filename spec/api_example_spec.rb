@@ -1,7 +1,4 @@
-require "minitest/autorun"
-require "minitest/spec"
-require "turn"
-
+require_relative "spec_helper"
 require "api_example"
 
 describe ApiExample do

@@ -55,7 +55,7 @@ class ApiExample
       lines << "#{key}: #{value}"
     end
 
-    if response[:body]
+    if response[:body].present?
       lines << ""
       lines << JSON.pretty_generate(JSON.parse(response[:body]))
     end

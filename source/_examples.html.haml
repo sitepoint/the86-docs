@@ -1,5 +1,5 @@
 %ul
-  - examples(resource).grouped.each_pair do |grouping, examples|
+  - examples_for(resource).grouped.each_pair do |grouping, examples|
     %li
       = link_to grouping.title, grouping.fragment
       %em
@@ -7,12 +7,12 @@
           = pluralize examples.length, "example"
 
 
-- examples(resource).grouped.each_pair do |grouping, examples|
+- examples_for(resource).grouped.each_pair do |grouping, examples|
 
   %section{id: grouping.id}
     %h2= grouping.title
 
-    - examples("User").each do |example|
+    - examples_for("User").each do |example|
 
       %p= example.subtitle
 

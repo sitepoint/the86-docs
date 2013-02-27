@@ -12,7 +12,7 @@ module SiteHelpers
     data.page.description || "Podling API Documentation"
   end
 
-  def examples(resource_name)
+  def examples_for(resource_name)
     ApiExampleCollection.load "podling.com",
       Pathname("examples") + resource_name + "*.yml"
   end

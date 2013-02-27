@@ -1,7 +1,6 @@
 module UrlHelpers
 
   PAGES = %w{
-    clients
     conversations
     groups
     posts
@@ -12,6 +11,7 @@ module UrlHelpers
     authentication
     errors
     introduction
+    clients
     message_formats
     representations
     versioning

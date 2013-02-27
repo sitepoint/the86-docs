@@ -21,21 +21,24 @@ class ApiExample
   # A multi-line string representation of the HTTP request.
   def http_request
     lines = []
+    request = data[:request]
 
-    method, override = method_and_override(data[:action])
+    verb, override = method_and_override(request[:verb])
 
-    lines << data[:action].sub(/^\w+/, method) + " HTTP/1.1"
+    lines << "%s %s HTTP/1.1" % [verb, request[:path]]
 
     lines << "X-Http-Method-Override: #{override}" if override
 
     lines << "Host: #{host}"
 
-    unless data[:authorization] == false
-      lines << "Authorization: Bearer USER_ACCESS_TOKEN"
+    request[:headers].each_pair do |key, value|
+      lines << "#{key}: #{value}"
     end
 
-    if parameters?
+    if request[:data]
       lines << "Content-Type: application/json; charset=utf-8"
+      lines << ""
+      lines << JSON.pretty_generate(request[:data])
     end
 
     lines.join("\n")
@@ -48,26 +51,16 @@ class ApiExample
 
     lines << status_line(response)
 
-    if response[:content_type]
-      lines << "Content-Type: #{response[:content_type]}"
+    response[:headers].each_pair do |key, value|
+      lines << "#{key}: #{value}"
     end
 
     if response[:body]
       lines << ""
-      lines << JSON.pretty_generate(JSON.parse(response.body))
+      lines << JSON.pretty_generate(JSON.parse(response[:body]))
     end
 
     lines.join("\n")
-  end
-
-  # Whether there are request parameters described.
-  def parameters?
-    parameters && parameters.any?
-  end
-
-  # Request parameter descriptions.
-  def parameters
-    @data[:parameters]
   end
 
   private
@@ -75,10 +68,8 @@ class ApiExample
   attr_reader :data
   attr_reader :host
 
-  def method_and_override(action)
+  def method_and_override(verb)
     override_verbs = ["PATCH"]
-
-    verb, path = action.split(" ")
 
     if override_verbs.include?(verb)
       ["POST", verb]

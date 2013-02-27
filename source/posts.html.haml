@@ -24,5 +24,5 @@ title: "Posts"
     Posts may be "liked" by members of the group to which the conversation
     belongs.
 
-  - data.resources_posts.endpoints.each do |ep|
-    = partial("endpoint", locals: { example: ApiExample.new("podling.com", ep) } )
+  - each_example("Post") do |example|
+    = partial("endpoint", locals: {example: example} )

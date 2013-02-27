@@ -1,0 +1,22 @@
+---
+:title: Groups API
+:subtitle: Groups API authenticated as User creates group
+:request:
+  :verb: POST
+  :path: /api/v1/groups
+  :data:
+    :name: A Group!
+  :headers:
+    Authorization: Bearer accesstoken51
+:response:
+  :status: 201
+  :headers:
+    Content-Type: application/json; charset=utf-8
+    X-UA-Compatible: IE=Edge,chrome=1
+    ETag: ! '"b2612b088dad6389751b98f4efca2dfa"'
+    Cache-Control: max-age=0, private, must-revalidate
+    X-Request-Id: !binary |-
+      YmFhYTg4MWJhNTdlYTJmYzkzMDU4ZTVjNTQ2NTIxNjE=
+    X-Runtime: '0.019336'
+    Content-Length: '140'
+  :body: ! '{"id":1129,"name":"A Group!","slug":"1129-a-group","created_at":"2013-02-27T05:05:15Z","updated_at":"2013-02-27T05:05:15Z","member_count":1}'

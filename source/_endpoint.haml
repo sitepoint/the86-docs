@@ -5,20 +5,5 @@
 - code(:http) do
   = example.http_request
 
-- if example.parameters?
-  %table.table
-    -# %tr
-    -#   %th Key
-    -#   %th Type
-    -#   %th Description
-    - example.parameters.each do |parameter|
-      %tr
-        %td
-          %strong= parameter["key"]
-          - if parameter["optional"]
-            %em (optional)
-        %td= parameter["type"]
-        %td= parameter["description"]
-
 - code(:http) do
   = example.http_response

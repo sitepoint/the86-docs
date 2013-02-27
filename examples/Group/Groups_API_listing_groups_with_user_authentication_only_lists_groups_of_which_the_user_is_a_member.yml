@@ -1,0 +1,22 @@
+---
+:title: ! 'Groups API: listing groups'
+:subtitle: ! 'Groups API: listing groups with user authentication only lists groups
+  of which the user is a member'
+:request:
+  :verb: GET
+  :path: /api/v1/groups
+  :data: 
+  :headers:
+    Authorization: Bearer accesstoken62
+:response:
+  :status: 200
+  :headers:
+    Content-Type: application/json; charset=utf-8
+    X-UA-Compatible: IE=Edge,chrome=1
+    ETag: ! '"057ad95f3ac32f0771c1d11a9f221151"'
+    Cache-Control: max-age=0, private, must-revalidate
+    X-Request-Id: !binary |-
+      YTQwNGFhM2M1OThhNTUyZWZjYmJhMjE2N2ExYWJkMDI=
+    X-Runtime: '0.013919'
+    Content-Length: '143'
+  :body: ! '[{"id":1142,"name":"Group 80","slug":"1142-group-80","created_at":"2013-02-27T05:05:15Z","updated_at":"2013-02-27T05:05:15Z","member_count":1}]'

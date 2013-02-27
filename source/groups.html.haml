@@ -11,5 +11,5 @@ title: Group
     Subresources: 
     =link_to("Conversations", conversations_path)
 
-  - data.resources_groups.endpoints.each do |ep|
-    = partial("endpoint", locals: { example: ApiExample.new("podling.com", ep) } )
+  - each_example("Group") do |example|
+    = partial("endpoint", locals: {example: example} )

@@ -1,6 +1,6 @@
-%h2= title
+%h2= example.title
 
-%p= subtitle
+%p= example.subtitle
 
 - code(:http) do
   = example.http_request
@@ -22,7 +22,3 @@
 
 - code(:http) do
   = example.http_response
-
-%dt Examples
-%dd
-  %dl=partial("examples", locals: { examples: examples } )

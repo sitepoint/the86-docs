@@ -10,6 +10,14 @@ class ApiExample
     @data = data
   end
 
+  def title
+    data[:title]
+  end
+
+  def subtitle
+    data[:subtitle]
+  end
+
   # A multi-line string representation of the HTTP request.
   def http_request
     lines = []

@@ -27,4 +27,4 @@ title: Conversations
     activity in muted conversations.
 
   - data.resources_conversations.endpoints.each do |ep|
-    = endpoint(ep)
+    = partial("endpoint", locals: { example: ApiExample.new("podling.com", ep) } )

@@ -25,4 +25,4 @@ title: "Posts"
     belongs.
 
   - data.resources_posts.endpoints.each do |ep|
-    =endpoint(ep)
+    = partial("endpoint", locals: { example: ApiExample.new("podling.com", ep) } )

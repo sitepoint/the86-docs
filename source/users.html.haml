@@ -3,4 +3,4 @@
   %h1 User
 
   - data.resources_users.endpoints.each do |ep|
-    = endpoint(ep)
+    = partial("endpoint", locals: { example: ApiExample.new("podling.com", ep) } )

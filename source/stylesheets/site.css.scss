@@ -46,7 +46,17 @@ article {
 
 }
 
-.toc {
-  margin-top: 40px; // space around table of contents.
-  margin-bottom: 40px;
+.example {
+
+  margin-bottom: 100px; // space between examples.
+
+  .http .label {
+    background-color: lighten(rgb(153, 153, 153), 20%); // lighten Bootstrap's default
+  }
+
+  .toc {
+    margin-top: 40px; // space around table of contents.
+    margin-bottom: 40px;
+  }
+
 }

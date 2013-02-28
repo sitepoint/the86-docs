@@ -14,12 +14,27 @@
 
     - examples.each do |example|
 
-      %p= example.subtitle
+      .example
 
-      - code(:http) do
-        = example.http_request
+        %p
+          %strong Example:
+          = succeed "." do
+            = example.subtitle
 
-      - code(:http) do
-        = example.http_response
+        .http
 
-    = top_of_page_link
+          .request
+
+            %span.label Request
+
+            - code(:http) do
+              = example.http_request
+
+          .response
+
+            %span.label Reponse
+
+            - code(:http) do
+              = example.http_response
+
+        = top_of_page_link

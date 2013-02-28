@@ -4,7 +4,7 @@
   a new conversation with an original post
 :request:
   :verb: POST
-  :path: /api/v1/groups/721-group-12/conversations
+  :path: /api/v1/groups/1525-group-12/conversations
   :data:
     :content: Conversation!
   :headers:
@@ -13,12 +13,11 @@
   :status: 201
   :headers:
     Content-Type: application/json; charset=utf-8
-    X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"6397d19fcf6eb180ae5cdca91a125513"'
+    ETag: ! '"3cf975cc384801814700464dd8bbd68e"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      NGZiNGNiZmQ2NjgzMmEzYmU5MWMxOWJkNjRiNThjODI=
-    X-Runtime: '0.112267'
-    Content-Length: '568'
-  :body: ! '{"id":668,"created_at":"2013-02-27T15:23:23Z","updated_at":"2013-02-27T15:23:23Z","bumped_at":"2013-02-27T15:23:23Z","posts":[{"id":588,"content":"Conversation!","content_html":"<p>Conversation!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T15:23:23Z","updated_at":"2013-02-27T15:23:23Z","attachments":[],"user":{"id":1404,"name":"OAuth
-    user","email":"user5@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:23Z","url":"http://www.example.com/api/v1/users/1404"},"likes":[]}]}'
+      ZTE2MWNlMjg0OWE5OWVjZTFmNTUxMDU5MWRmMDZiMTE=
+    X-Runtime: '0.199963'
+    Content-Length: '570'
+  :body: ! '{"id":1442,"created_at":"2013-02-28T07:19:14Z","updated_at":"2013-02-28T07:19:14Z","bumped_at":"2013-02-28T07:19:14Z","posts":[{"id":1272,"content":"Conversation!","content_html":"<p>Conversation!</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-28T07:19:14Z","updated_at":"2013-02-28T07:19:14Z","attachments":[],"user":{"id":3000,"name":"OAuth
+    user","email":"user5@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:14Z","url":"http://www.example.com/api/v1/users/3000"},"likes":[]}]}'

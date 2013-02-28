@@ -3,25 +3,24 @@
 :subtitle: Creating Posts can reply to an individual post
 :request:
   :verb: POST
-  :path: /api/v1/groups/808-group-96/conversations/768/posts
+  :path: /api/v1/groups/1612-group-96/conversations/1542/posts
   :data:
     :content: You are WRONG on the internet!
-    :in_reply_to_id: 655
+    :in_reply_to_id: 1339
   :headers:
     Authorization: Bearer accesstoken77
 :response:
   :status: 201
   :headers:
     Content-Type: application/json; charset=utf-8
-    X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"12e19ce5be37ca823851f202041bbe98"'
+    ETag: ! '"34411c9b0586e3666dfe1ee7d7bc3786"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      M2E3YWMwZThkNWZlNDZlOTlmYzc2NGQ2MDViYTRhNWU=
-    X-Runtime: '0.031078'
-    Content-Length: '938'
-  :body: ! '{"id":656,"content":"You are WRONG on the internet!","content_html":"<p>You
-    are WRONG on the internet!</p>","is_original":false,"in_reply_to_id":655,"created_at":"2013-02-27T15:23:27Z","updated_at":"2013-02-27T15:23:27Z","attachments":[],"user":{"id":1580,"name":"OAuth
-    user","email":"user182@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:26Z","url":"http://www.example.com/api/v1/users/1580"},"in_reply_to":{"id":655,"content":"Post
-    content goes here","content_html":"<p>Post content goes here</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T15:23:27Z","updated_at":"2013-02-27T15:23:27Z","attachments":[],"user":{"id":1581,"name":"User
-    135","email":"user183@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:27Z","url":"http://www.example.com/api/v1/users/1581"}},"likes":[]}'
+      YTk5YTM4YjFhM2Q5MGMxYjIxYjlmMzg1MjVlMmYyZTc=
+    X-Runtime: '0.055754'
+    Content-Length: '941'
+  :body: ! '{"id":1340,"content":"You are WRONG on the internet!","content_html":"<p>You
+    are WRONG on the internet!</p>","is_original":false,"in_reply_to_id":1339,"created_at":"2013-02-28T07:19:21Z","updated_at":"2013-02-28T07:19:21Z","attachments":[],"user":{"id":3176,"name":"OAuth
+    user","email":"user182@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:21Z","url":"http://www.example.com/api/v1/users/3176"},"in_reply_to":{"id":1339,"content":"Post
+    content goes here","content_html":"<p>Post content goes here</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-28T07:19:21Z","updated_at":"2013-02-28T07:19:21Z","attachments":[],"user":{"id":3177,"name":"User
+    135","email":"user183@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:21Z","url":"http://www.example.com/api/v1/users/3177"}},"likes":[]}'

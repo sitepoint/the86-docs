@@ -12,11 +12,10 @@
   :status: 200
   :headers:
     Content-Type: application/json; charset=utf-8
-    X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"fbd69e49507a55217f54b652fde861de"'
+    ETag: ! '"d84467ada7a74ce125887f2ac7e29bf3"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      NDEzOGY4Zjk5NzRmOGNjYzJiZWJjZGMyZDYzYTM4OGI=
-    X-Runtime: '0.013101'
-    Content-Length: '141'
-  :body: ! '[{"id":792,"name":"Group 80","slug":"792-group-80","created_at":"2013-02-27T15:23:26Z","updated_at":"2013-02-27T15:23:26Z","member_count":1}]'
+      Y2NiYzI4YjJlMTgxY2Q1YzYyNzFhYmRmNjQ5MmZhYjU=
+    X-Runtime: '0.025580'
+    Content-Length: '143'
+  :body: ! '[{"id":1596,"name":"Group 80","slug":"1596-group-80","created_at":"2013-02-28T07:19:20Z","updated_at":"2013-02-28T07:19:20Z","member_count":1}]'

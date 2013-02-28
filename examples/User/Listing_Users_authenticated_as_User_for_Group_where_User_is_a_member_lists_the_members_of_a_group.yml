@@ -4,7 +4,7 @@
   the members of a group
 :request:
   :verb: GET
-  :path: /api/v1/groups/794-group-82/members
+  :path: /api/v1/groups/1598-group-82/members
   :data: 
   :headers:
     Authorization: Bearer accesstoken63
@@ -12,13 +12,12 @@
   :status: 200
   :headers:
     Content-Type: application/json; charset=utf-8
-    X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"686a75e3e464dbd739a233b24e682f03"'
+    ETag: ! '"33bb371d25484afc25273bcf9f5ebc1a"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      ZTUyZWY3ZTM5YTNjZmEyNDgwZjk4MzRjOTM3NjliMWU=
-    X-Runtime: '0.013162'
+      Zjc1ZWVlZGU3YmQ1NmJjY2ZjYWVjNDVlMmQyNDFkZTc=
+    X-Runtime: '0.024400'
     Content-Length: '657'
-  :body: ! '[{"id":1550,"name":"OAuth user","email":"user152@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:26Z","url":"http://www.example.com/api/v1/users/1550"},{"id":1551,"name":"User
-    117","email":"user153@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:26Z","url":"http://www.example.com/api/v1/users/1551"},{"id":1552,"name":"User
-    118","email":"user154@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:26Z","url":"http://www.example.com/api/v1/users/1552"}]'
+  :body: ! '[{"id":3146,"name":"OAuth user","email":"user152@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:20Z","url":"http://www.example.com/api/v1/users/3146"},{"id":3147,"name":"User
+    117","email":"user153@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:20Z","url":"http://www.example.com/api/v1/users/3147"},{"id":3148,"name":"User
+    118","email":"user154@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:20Z","url":"http://www.example.com/api/v1/users/3148"}]'

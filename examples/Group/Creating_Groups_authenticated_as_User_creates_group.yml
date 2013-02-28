@@ -12,11 +12,10 @@
   :status: 201
   :headers:
     Content-Type: application/json; charset=utf-8
-    X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"a4ddca9474464c3a271e27d27925a28b"'
+    ETag: ! '"7e554b9fdb2a0ddf141e738710c0ee99"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      NTA0OTQwNzUzMmQ3YTE1NWY1OWQzZGI4NmU5YWZhZWI=
-    X-Runtime: '0.016394'
-    Content-Length: '138'
-  :body: ! '{"id":779,"name":"A Group!","slug":"779-a-group","created_at":"2013-02-27T15:23:26Z","updated_at":"2013-02-27T15:23:26Z","member_count":1}'
+      ZDM4MDU5ZjA1ZGM3NmI0ODg5MjcxNjU5NjAwMmU4Y2U=
+    X-Runtime: '0.028662'
+    Content-Length: '140'
+  :body: ! '{"id":1583,"name":"A Group!","slug":"1583-a-group","created_at":"2013-02-28T07:19:20Z","updated_at":"2013-02-28T07:19:20Z","member_count":1}'

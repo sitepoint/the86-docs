@@ -4,16 +4,15 @@
   the conversation
 :request:
   :verb: POST
-  :path: /api/v1/groups/754-group-45/conversations/723/mute
+  :path: /api/v1/groups/1558-group-45/conversations/1497/mute
   :data: 
   :headers:
     Authorization: Bearer accesstoken39
 :response:
   :status: 204
   :headers:
-    X-UA-Compatible: IE=Edge,chrome=1
     Cache-Control: no-cache
     X-Request-Id: !binary |-
-      MWVjODRiMzMyZThhNDE1NmNiYTkzYWI5ODgyNTZkNGU=
-    X-Runtime: '0.010352'
+      YjY2OTQ4Y2FmNjZlNTQwMTdhMDRiZjIzOGUzZDBjNjQ=
+    X-Runtime: '0.020410'
   :body: ''

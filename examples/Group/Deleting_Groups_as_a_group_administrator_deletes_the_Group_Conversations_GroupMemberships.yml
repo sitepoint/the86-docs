@@ -4,16 +4,15 @@
   GroupMemberships
 :request:
   :verb: DELETE
-  :path: /api/v1/groups/785-group-73
+  :path: /api/v1/groups/1589-group-73
   :data: 
   :headers:
     Authorization: Bearer accesstoken56
 :response:
   :status: 204
   :headers:
-    X-UA-Compatible: IE=Edge,chrome=1
     Cache-Control: no-cache
     X-Request-Id: !binary |-
-      Y2IzNzYwOGRlNjM5YmI1YjM0NTdmOGFmMGFmZjk2YjU=
-    X-Runtime: '0.017538'
+      NjkxZjhjODUxYzM1ZTU4YmUzYTRjZjE3OTgzYzg4MzE=
+    X-Runtime: '0.039929'
   :body: ''

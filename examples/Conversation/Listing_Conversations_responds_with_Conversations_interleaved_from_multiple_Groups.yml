@@ -4,7 +4,7 @@
   Groups
 :request:
   :verb: GET
-  :path: /api/v1/users/1503/conversations
+  :path: /api/v1/users/3099/conversations
   :data: 
   :headers:
     Authorization: Bearer accesstoken47
@@ -12,20 +12,19 @@
   :status: 200
   :headers:
     Content-Type: application/json; charset=utf-8
-    X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"0e2e14126cc909a580192ab0b87ba772"'
+    ETag: ! '"91f4d02ec3cea516877379eb705f534a"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      YWNkMTY1MTMwNjU1OWFkMjVhNmZjY2M1NjIwYWRjNjQ=
-    X-Runtime: '0.029527'
-    Content-Length: '2113'
-  :body: ! '[{"id":747,"created_at":"2013-02-27T15:23:25Z","updated_at":"2013-02-27T15:23:25Z","bumped_at":"2013-02-27T13:23:25Z","posts":[{"id":630,"content":"2
-    hours","content_html":"<p>2 hours</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T13:23:25Z","updated_at":"2013-02-27T15:23:25Z","attachments":[],"user":{"id":1507,"name":"User
-    86","email":"user108@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:25Z","url":"http://www.example.com/api/v1/users/1507"},"likes":[]}],"group":{"id":764,"name":"Group
-    55","slug":"764-group-55","created_at":"2013-02-27T15:23:25Z","updated_at":"2013-02-27T15:23:25Z","member_count":1}},{"id":746,"created_at":"2013-02-27T15:23:25Z","updated_at":"2013-02-27T15:23:25Z","bumped_at":"2013-02-27T12:23:25Z","posts":[{"id":629,"content":"3
-    hours","content_html":"<p>3 hours</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T12:23:25Z","updated_at":"2013-02-27T15:23:25Z","attachments":[],"user":{"id":1505,"name":"User
-    84","email":"user106@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:25Z","url":"http://www.example.com/api/v1/users/1505"},"likes":[]}],"group":{"id":763,"name":"Group
-    54","slug":"763-group-54","created_at":"2013-02-27T15:23:25Z","updated_at":"2013-02-27T15:23:25Z","member_count":1}},{"id":745,"created_at":"2013-02-27T15:23:25Z","updated_at":"2013-02-27T15:23:25Z","bumped_at":"2013-02-27T11:23:25Z","posts":[{"id":628,"content":"4
-    hours","content_html":"<p>4 hours</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-27T11:23:25Z","updated_at":"2013-02-27T15:23:25Z","attachments":[],"user":{"id":1502,"name":"User
-    82","email":"user103@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:25Z","url":"http://www.example.com/api/v1/users/1502"},"likes":[]}],"group":{"id":762,"name":"Group
-    53","slug":"762-group-53","created_at":"2013-02-27T15:23:25Z","updated_at":"2013-02-27T15:23:25Z","member_count":1}}]'
+      MjBmODBhM2EyOTRlYjFkNjc4YjVmZThmYjllY2QwOWM=
+    X-Runtime: '0.058692'
+    Content-Length: '2125'
+  :body: ! '[{"id":1521,"created_at":"2013-02-28T07:19:18Z","updated_at":"2013-02-28T07:19:18Z","bumped_at":"2013-02-28T05:19:18Z","posts":[{"id":1314,"content":"2
+    hours","content_html":"<p>2 hours</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-28T05:19:18Z","updated_at":"2013-02-28T07:19:18Z","attachments":[],"user":{"id":3103,"name":"User
+    86","email":"user108@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:18Z","url":"http://www.example.com/api/v1/users/3103"},"likes":[]}],"group":{"id":1568,"name":"Group
+    55","slug":"1568-group-55","created_at":"2013-02-28T07:19:18Z","updated_at":"2013-02-28T07:19:18Z","member_count":1}},{"id":1520,"created_at":"2013-02-28T07:19:18Z","updated_at":"2013-02-28T07:19:18Z","bumped_at":"2013-02-28T04:19:18Z","posts":[{"id":1313,"content":"3
+    hours","content_html":"<p>3 hours</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-28T04:19:18Z","updated_at":"2013-02-28T07:19:18Z","attachments":[],"user":{"id":3101,"name":"User
+    84","email":"user106@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:18Z","url":"http://www.example.com/api/v1/users/3101"},"likes":[]}],"group":{"id":1567,"name":"Group
+    54","slug":"1567-group-54","created_at":"2013-02-28T07:19:18Z","updated_at":"2013-02-28T07:19:18Z","member_count":1}},{"id":1519,"created_at":"2013-02-28T07:19:18Z","updated_at":"2013-02-28T07:19:18Z","bumped_at":"2013-02-28T03:19:18Z","posts":[{"id":1312,"content":"4
+    hours","content_html":"<p>4 hours</p>","is_original":true,"in_reply_to_id":null,"created_at":"2013-02-28T03:19:18Z","updated_at":"2013-02-28T07:19:18Z","attachments":[],"user":{"id":3098,"name":"User
+    82","email":"user103@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:18Z","url":"http://www.example.com/api/v1/users/3098"},"likes":[]}],"group":{"id":1566,"name":"Group
+    53","slug":"1566-group-53","created_at":"2013-02-28T07:19:18Z","updated_at":"2013-02-28T07:19:18Z","member_count":1}}]'

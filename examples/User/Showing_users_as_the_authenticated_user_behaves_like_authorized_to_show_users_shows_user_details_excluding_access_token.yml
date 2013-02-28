@@ -4,7 +4,7 @@
   users shows user details excluding access_token
 :request:
   :verb: GET
-  :path: /api/v1/users/1657
+  :path: /api/v1/users/3253
   :data: 
   :headers:
     Authorization: Bearer accesstoken116
@@ -12,11 +12,10 @@
   :status: 200
   :headers:
     Content-Type: application/json; charset=utf-8
-    X-UA-Compatible: IE=Edge,chrome=1
-    ETag: ! '"d89078c242749380f2225e9b48fab60d"'
+    ETag: ! '"1dea32a1ce100056da47381afc806335"'
     Cache-Control: max-age=0, private, must-revalidate
     X-Request-Id: !binary |-
-      NDkwYjM0MmY5MGJiYmUzN2UxNjllNjg2M2M5MmZiYzQ=
-    X-Runtime: '0.005548'
+      NjU4MDdhZjg5ZmRlMWQ1ZDdmMzJkNjdjOWZmZjk5NDI=
+    X-Runtime: '0.012504'
     Content-Length: '219'
-  :body: ! '{"id":1657,"name":"OAuth user","email":"user255@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-27T15:23:29Z","url":"http://www.example.com/api/v1/users/1657"}'
+  :body: ! '{"id":3253,"name":"OAuth user","email":"user255@example.org","avatar_url":null,"twitter_username":null,"profile":null,"location":null,"created_at":"2013-02-28T07:19:26Z","url":"http://www.example.com/api/v1/users/3253"}'

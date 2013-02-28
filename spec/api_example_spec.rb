@@ -105,6 +105,24 @@ describe ApiExample do
       end
     end
 
+    describe "with a suppressed X-Runtime header" do
+      let(:response) do
+        {
+          status: 200,
+          headers: {
+            "X-Not-Filtered" => "keep me",
+            "X-Runtime" => "0.123",
+          }
+        }
+      end
+      it "removes X-Runtime header" do
+        response_lines.wont_include("X-Runtime: 0.123")
+      end
+      it "does not remove other headers" do
+        response_lines.must_include("X-Not-Filtered: keep me")
+      end
+    end
+
   end
 
 end

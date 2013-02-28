@@ -3,6 +3,11 @@ require "json"
 
 class ApiExample
 
+  SUPPRESS_RESPONSE_HEADERS = %w{
+    X-Runtime
+    X-Request-Id
+  }
+
   # host is the string used in the Host header, e.g. example.org.
   # data is a nested structure loaded from YAML.
   def initialize(host, data)
@@ -51,7 +56,10 @@ class ApiExample
 
     lines << status_line(response)
 
-    (response[:headers] || {}).each_pair do |key, value|
+    (response[:headers] || {}).
+      reject { |k, _| SUPPRESS_RESPONSE_HEADERS.include?(k) }.
+      each_pair do |key, value|
+
       lines << "#{key}: #{value}"
     end
 

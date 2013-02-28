@@ -6,7 +6,23 @@ title: Group
 
   %h1 Group
 
-  %p A Group has one or more administrators (Users). A Group is referenced in an endpoint with the group's slug
+  %h2 Administrators
+  %p
+    A Group has one administrator (User). The Administrators may:
+    %ul
+      %li
+        Remove any other member (including other Administrators) from the
+        Group.
+      %li
+        Hide any post or conversation in the Group
+    The creator of the Group immediately becomes the Administrator.
+
+  %h2 Name Slugs
+  %p
+    A Group is referenced in a URI with the group's 'slug'; a string which is
+    derived from the Group's name and ID. Slugs are returned with Group
+    representations. E.g. a Group with name "Citizen Family" could be shown
+    via the URI <code>api/v1/14-citizen-family</code>
   %p
     Subresources: 
     =link_to("Conversations", conversations_path)

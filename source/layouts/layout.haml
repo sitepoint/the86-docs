@@ -14,10 +14,20 @@
     -# Anchor for 'Back to Top' links
     <a name="top"></a>
 
+
     %div.container
 
       %header
         %h1 Podling API Documentation
+
+      %ul.nav.nav-list
+        %li.nav-header TOC
+        %li= link_to "Index", "/"
+        %li.nav-header Resources
+        %li= link_to "Users", users_path
+        %li= link_to "Groups", groups_path
+        %li= link_to "Conversations", conversations_path
+        %li= link_to "Posts", posts_path
 
       = yield
 

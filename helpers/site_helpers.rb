@@ -18,6 +18,6 @@ module SiteHelpers
   end
 
   def top_of_page_link
-    '<p><a href="#top">Back to top</a>'
+    '<p><a href="#container">Back to top</a>'
   end
 end

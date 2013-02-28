@@ -14,10 +14,16 @@
 
     - examples.each do |example|
 
-      %p= example.subtitle
+      %p
+        = example.subtitle
 
-      - code(:http) do
-        = example.http_request
+      %ul
+        %li
+          Request
+          - code(:http) do
+            = example.http_request
 
-      - code(:http) do
-        = example.http_response
+        %li
+          Response
+          - code(:http) do
+            = example.http_response

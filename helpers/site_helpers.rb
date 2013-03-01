@@ -18,7 +18,7 @@ module SiteHelpers
   end
 
   def top_of_page_link
-    '<p><a href="#container">Back to top</a>'
+    '<a class="top-link" href="#container">Back to top</a>'
   end
 
   def nav_element(text, path)

@@ -12,6 +12,18 @@
 
   %body
 
+    .navbar
+      .navbar-inner
+        .container
+          %ul.nav
+            = nav_element "Index", "/"
+            %li.divider-vertical
+            -#%li= link_to "Users", users_path
+            = nav_element "Users", users_path
+            = nav_element "Groups", groups_path
+            = nav_element "Conversations", conversations_path
+            = nav_element "Posts", posts_path
+
     -# Anchor for 'Back to Top' links
     %div.container#container
 

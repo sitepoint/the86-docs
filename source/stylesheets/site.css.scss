@@ -51,12 +51,48 @@ article {
   margin-bottom: 40px;
 }
 
-.nav {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+.navbar {
+  $navbar-height: 54px;
+  $navbar-top-color: #229ce2;
+  $navbar-bottom-color: #0f7ad5;
+
+  border-bottom: 1px dashed $navbar-bottom-color; // Podling-style
+
+  .navbar-inner {
+    // Nice Podling colorscheme
+    background-image: -webkit-linear-gradient(
+      top, $navbar-top-color, $navbar-bottom-color
+    );
+    border: none; // Override Bootstrap
+    border-radius: 0px; // Override Bootstrap
+    height: $navbar-height;
+  }
+
+  // Bootstrap's navbar container has auto width
+  .container {
+    width: 940px; // Override Bootstrap
+  }
+
+  // All text in the navbar; be specific to override Bootstrap
+  .nav > li > a, .brand {
+    color: #fff;
+    font-size: 14px;
+    text-shadow: none; // Override Bootstrap
+    line-height: 34px;
+  }
+  .nav > li > a:hover {
+    color: #ddd;
+  }
+
+  // Active nav link, and its hover
+  .nav > .active > a, .nav > li.active > a:hover {
+    color: $navbar-bottom-color;
+  }
+
+  .divider-vertical {
+    border-left-color: darken($navbar-top-color, 10%);
+    border-right-color: lighten($navbar-top-color, 10%);
+    height: $navbar-height;
+    margin: 0;
+  }
 }

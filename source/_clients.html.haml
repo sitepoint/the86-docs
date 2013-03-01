@@ -18,3 +18,73 @@
     %li
       = link_to "the86-php", "https://github.com/sitepoint/the86-php"
       for PHP 5.4+.
+
+  %ul.nav.nav-tabs#usageTab
+    %li.active= link_to "Ruby", "#rubyClientUsage", "data-toggle" => "tab"
+    %li= link_to "PHP", "#phpClientUsage", "data-toggle" => "tab"
+
+  .tab-content
+    .tab-pane.active#rubyClientUsage
+      = code("ruby") do
+        :plain
+          # The domain running The 86 discussion server.
+          The86::Client.domain = "the86.yourdomain.com"
+
+          # HTTP Basic Auth credentials allocated for your API client.
+          The86::Client.credentials = ["username", "password"]
+
+          # Create an end-user account:
+          user = The86::Client.users.create(name: "John Citizen")
+          oauth_token = user.access_tokens.first.token
+
+          # Create a new conversation:
+          conversation = The86::Client.site("example").conversations.create(
+            content: "Hello world!",
+            oauth_token: oauth_token
+          )
+
+          # Check for updates:
+          site = The86::Client.site("example")
+          conversations = site.conversations.with_parameters(
+            posts_since: time.iso8601,
+            without_user: 64,
+          )
+
+    .tab-pane#phpClientUsage
+      = code("php") do
+        :plain
+          <?php
+
+          // Get a configured client.
+          $client = The86\The86Client::factory(array(
+            'domain' => 'the86.example.org',
+            'username' => 'your-group-username',
+            'password' => 'your-group-password',
+          ));
+
+          // Create a User.
+          $user = $client->getCommand('CreateUser', array(
+            'attributes' => array(
+              'name' => 'John Citizen',
+            ),
+          ))->execute();
+          var_dump($user->access_tokens[0]->token); // Keep it secret. Keep it safe.
+
+          // Create a Conversation.
+          $conversation = $client->getCommand('CreateConversation', array(
+            'group' => 'example',
+            'oauth_token' => 'usersoauthtoken',
+            'attributes' => array(
+              'content' => 'Hello world!',
+            ),
+          ))->execute();
+          $post = $conversation->posts[0];
+          var_dump($post->content_html); // HTML, auto-linkified, etc.
+
+          // List all recent conversations/posts for a group.
+          $conversations = $client->getCommand('ListConversations', array(
+            'group' => 'example',
+            'parameters' => array(
+              'posts_since' => '2012-08-08T03:26:52Z',
+            ),
+          ))->execute();

@@ -35,6 +35,12 @@ p {
   margin: 0 0 16px; // more space between paragraphs.
 }
 
+pre {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
 article {
 
   margin-bottom: 100px; // space between articles.
@@ -104,5 +110,14 @@ article {
     border-right-color: lighten($navbar-top-color, 10%);
     height: $navbar-height;
     margin: 0;
+  }
+}
+
+article {
+  .nav {
+    margin: 0;
+  }
+  .nav-tabs {
+    border-bottom: none; // Override Bootstrap
   }
 }
